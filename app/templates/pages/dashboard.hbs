@@ -2,10 +2,14 @@
 
 {{> layout/head page-title="Dashboard" }}
 {{> layout/header }}
-{{> layout/nav}}
-<main class="page__content">
+{{> layout/nav home=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/page-dashboard/dashboard}}
+  </div>
+</div>
 
-  {{> layout/footer }}
+{{> layout/footer }}
 
 
 

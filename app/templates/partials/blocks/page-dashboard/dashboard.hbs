@@ -1,0 +1,19 @@
+<div class="dashboard">
+  <span class="dashboard__title">My Passport</span>
+
+  <div class="dashboard__inner">
+    <div class="dashboard__cards">
+      {{#times 6}}
+        <div class="dashboard__card">
+          {{> widgets/card
+                  flag-icon="flags/flag_india"
+                  title="India"
+                  completed=true
+                  bottom-label="Video materials"
+                  label-icon='video'
+          }}
+        </div>
+      {{/times}}
+    </div>
+  </div>
+</div>

@@ -1,12 +1,11 @@
 .btn {
+  padding: 4px 18px;
   display: inline-block;
-  padding: 12px 20px;
-  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
   line-height: 100%;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  font-weight: bold;
+  border-radius: 30px;
   @include transition;
   white-space: nowrap;
   appearance: none;
@@ -57,5 +56,14 @@
   &--large {
     padding: 20px 25px;
     font-size: 20px;
+  }
+
+  &--yellow {
+    background: $color-yellow;
+    color: $color-white;
+
+    &:hover {
+      color: $color-yellow-hover;
+    }
   }
 }

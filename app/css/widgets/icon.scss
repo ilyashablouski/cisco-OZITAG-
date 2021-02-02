@@ -1,0 +1,21 @@
+.icon:not(svg) {
+  width: 50px;
+  height: 35px;
+  background: $color-gray;
+  border-radius: 10px;
+
+  //&.icon--small {
+  //  width: 64px;
+  //  height: 64px;
+  //}
+  //
+  //@include mobile {
+  //  width: 56px;
+  //  height: 56px;
+  //
+  //  img {
+  //    max-width: 38px;
+  //    max-height: 38px;
+  //  }
+  //}
+}

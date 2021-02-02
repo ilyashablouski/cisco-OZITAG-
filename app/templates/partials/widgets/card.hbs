@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card__content">
+    <div class="card__top">
+      {{#if flag-icon}}
+        {{> widgets/icon icon=flag-icon }}
+      {{/if}}
+
+      {{#if btn-top}}
+        {{#if incompleted}}
+          {{> ui/btn label="Start"}}
+        {{/if}}
+        {{#if inprogress}}
+          {{> ui/btn color="yellow" label="Continue"}}
+        {{/if}}
+      {{/if}}
+    </div>
+
+    <span class="card__title">{{title}}</span>
+    <span class="card__status card__status{{#if completed}}--completed{{/if}}{{#if
+            incompleted}}--incompleted{{/if}}{{#if
+            inprogress}}--inprogress{{/if}}">
+    {{#if completed}}
+      Completed
+    {{/if}}
+
+      {{#if incompleted}}
+        Incompleted
+      {{/if}}
+
+      {{#if inprogress}}
+        In progress
+      {{/if}}
+  </span>
+  </div>
+
+  <div class="card__bottom">
+    <span class="card__bottom-label card__bottom-label{{#ifCond label-icon 'video'}}--video{{/ifCond}}
+      {{#ifCond label-icon 'text'}}--text{{/ifCond}}{{#ifCond label-icon 'presentation'}}--presentation{{/ifCond}}">
+      {{bottom-label}}
+    </span>
+  </div>
+</div>

@@ -8,14 +8,32 @@
 
   &__btn {
     text-align: center;
+    color: $color-gray;
+
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
 
     &-img {
       display: block;
+      font-size: 24px;
     }
 
     &-label {
       margin-top: 10px;
       display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &.active {
+      color: $color-primary;
+    }
+
+    &:hover {
+      color: $color-primary;
     }
   }
+
 }

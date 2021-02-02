@@ -14,8 +14,16 @@
   }
 
   &__content {
+    display: flex;
     flex: 1 0 auto;
     min-height: 1px;
+
+  }
+
+  &__main {
+    width: 100%;
+    min-height: 100vh;
+    background: #F5F7FB;
   }
 
   &__footer {

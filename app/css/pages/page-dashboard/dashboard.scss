@@ -1,0 +1,26 @@
+.dashboard {
+  margin-top: 28px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  &__inner {
+    margin-top: 28px;
+  }
+
+  &__cards {
+    margin: 0 -10px;
+    display: flex;
+  }
+
+  &__card {
+    padding: 0 10px;
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+  }
+
+
+}
