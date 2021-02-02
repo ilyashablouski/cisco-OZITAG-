@@ -10,13 +10,13 @@ module.exports = () => {
       `${$.config.sourcePath}/${$.config.hbsPath}/partials`,
     ],
     helpers: {
-      times: function(n, block) {
+      times: function (n, block) {
         let accum = '';
         for (let i = 0; i < n; ++i) accum += block.fn(i + 1);
 
         return accum;
       },
-      when: function(v1, operator, v2, options) {
+      when: function (v1, operator, v2, options) {
         switch (operator) {
           case '==':
             return (v1 == v2) ? options.fn(this) : options.inverse(this);
@@ -42,16 +42,35 @@ module.exports = () => {
             return options.inverse(this);
         }
       },
-      ifCond: function(v1, v2, options) {
+      ifCond: function (v1, v2, options) {
         if (v1 === v2) return options.fn(this);
 
         return options.inverse(this);
       },
-      concat: function(...args) {
+      math: function (lvalue, operator, rvalue, options) {
+        if (arguments.length < 4) {
+          // Operator omitted, assuming "+"
+          options = rvalue;
+          rvalue = operator;
+          operator = "+";
+        }
+
+        lvalue = parseFloat(lvalue);
+        rvalue = parseFloat(rvalue);
+
+        return {
+          "+": lvalue + rvalue,
+          "-": lvalue - rvalue,
+          "*": lvalue * rvalue,
+          "/": lvalue / rvalue,
+          "%": lvalue % rvalue
+        }[operator];
+      },
+      concat: function (...args) {
         return `${args.slice(0, -1).join('')}`;
       },
-      ifUseWebp: function(block){
-        if($.config.buildWebp)
+      ifUseWebp: function (block) {
+        if ($.config.buildWebp)
           return block.fn(this);
         else
           return block.inverse(this);
@@ -66,7 +85,7 @@ module.exports = () => {
     const links = JSON.parse(
       $.fs.readFileSync(`${$.config.sourcePath}/${$.config.dbPath}/links.json`),
     );
-    const db = { ...initParams, ...data, ...links };
+    const db = {...initParams, ...data, ...links};
 
 
     return $.gulp.src([
@@ -79,7 +98,7 @@ module.exports = () => {
       .pipe($.gulpPlugin.rename(path => {
         let string = path.basename;
 
-        if(string === 'page') {
+        if (string === 'page') {
           path.basename = 'ui-toolkit';
         }
 
@@ -88,7 +107,7 @@ module.exports = () => {
       }))
       .pipe($.gulpPlugin.trim())
       .pipe($.gulp.dest(`${$.config.outputPath}/html`))
-      .pipe($.bs.reload({ stream: true }),
+      .pipe($.bs.reload({stream: true}),
       );
   });
 

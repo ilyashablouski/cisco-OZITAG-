@@ -1,0 +1,138 @@
+<div class="round-bar">
+  <div class="round-bar__circle {{#if color}}round-bar__circle--{{color}}{{/if}} {{#if mod}}{{mod}}{{/if}}">
+    <svg width="100%" height="100%" viewBox="0 0 38 38">
+      <circle cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#EAEAEA" stroke-width="5"></circle>
+      <circle cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="currentColor" stroke-width="1"
+              stroke-dasharray='{{progress}} {{math 100 "-" progress}}'
+              stroke-dashoffset="25"
+              stroke-linecap="round">
+      </circle>
+
+    </svg>
+  </div>
+  <span class="round-bar__value">
+    {{progress}}%
+  </span>
+</div>
+
+
+<svg width="100%" height="100%" viewBox="0 0 143 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle opacity="0.1" cx="67.9649" cy="67.9649" r="67.9649" fill="#1E4471"/>
+  <mask id="path-2-inside-1" fill="white">
+    <path d="M133.167 77.8983C134.265 78.0656 135.293 77.3113 135.428 76.209C136.544 67.0725 135.794 57.7969 133.215 48.9467C130.447 39.4525 125.642 30.6766 119.133 23.2314C112.624 15.7862 104.568 9.85112 95.5289 5.84041C87.1026 2.10175 78.0105 0.119191 68.8067 0.00521022C67.6962 -0.00854208 66.8113 0.910212 66.8304 2.02061C66.8495 3.13101 67.7654 4.01237 68.8759 4.02819C77.4944 4.15097 86.0065 6.0152 93.8979 9.51652C102.402 13.2899 109.981 18.8738 116.105 25.8784C122.229 32.8831 126.75 41.1397 129.354 50.0721C131.769 58.3605 132.48 67.0453 131.45 75.603C131.318 76.7056 132.069 77.731 133.167 77.8983Z"/>
+  </mask>
+  <path d="M133.167 77.8983C134.265 78.0656 135.293 77.3113 135.428 76.209C136.544 67.0725 135.794 57.7969 133.215 48.9467C130.447 39.4525 125.642 30.6766 119.133 23.2314C112.624 15.7862 104.568 9.85112 95.5289 5.84041C87.1026 2.10175 78.0105 0.119191 68.8067 0.00521022C67.6962 -0.00854208 66.8113 0.910212 66.8304 2.02061C66.8495 3.13101 67.7654 4.01237 68.8759 4.02819C77.4944 4.15097 86.0065 6.0152 93.8979 9.51652C102.402 13.2899 109.981 18.8738 116.105 25.8784C122.229 32.8831 126.75 41.1397 129.354 50.0721C131.769 58.3605 132.48 67.0453 131.45 75.603C131.318 76.7056 132.069 77.731 133.167 77.8983Z"
+        stroke="#74BF4B" stroke-width="9.24031" stroke-linecap="round" stroke-linejoin="round"
+        mask="url(#path-2-inside-1)"/>
+  <circle cx="67.9649" cy="67.9648" r="35.2895" fill="white"/>
+  <path d="M133.331 86.4257C137.408 86.4257 140.713 83.1209 140.713 79.0442C140.713 74.9674 137.408 71.6626 133.331 71.6626C129.254 71.6626 125.949 74.9674 125.949 79.0442C125.949 83.1209 129.254 86.4257 133.331 86.4257Z"
+        fill="#74BF4B" stroke="white" stroke-width="3"/>
+</svg>
+
+
+<div class="diagram progress" data-percent="18">
+  <div class="piece left"></div>
+  <div class="piece right"></div>
+  <div class="text">
+    <div>
+      <b>18</b>
+      <span>PERCENT</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .diagram {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #990;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .diagram::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    background: #ccc;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .diagram .piece {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .diagram .piece::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+
+  .diagram .piece.left {
+    transform: rotate(0deg);
+    z-index: 2;
+    border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
+  }
+
+  .diagram.over_50 .piece.left {
+    transform: rotate(180deg);
+  }
+
+  .diagram .piece.right {
+    transform: rotate(180deg);
+    z-index: 1;
+    border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
+  }
+
+  .diagram.over_50 .piece.right {
+    transform: rotate(360deg);
+  }
+
+  .diagram .left::before {
+    background: #059;
+  }
+
+  .diagram.over_50 .left::before {
+    background: #990;
+  }
+
+  .diagram .right::before {
+    background: #059;
+  }
+
+  .diagram .text {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diagram .text b {
+    font-size: 72px;
+  }
+
+  .diagram .text span {
+    font-size: 16px;
+    display: block;
+  }
+</style>
