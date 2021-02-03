@@ -1,4 +1,4 @@
-$icons: (sprite: (width: 225px, height: 186px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
+$icons: (sprite: (width: 241px, height: 210px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
 calendar: (width: 16px, height: 16px, backgroundX: 0px, backgroundY: 0px),
 clock: (width: 16px, height: 16px, backgroundX: -16px, backgroundY: -16px),
 form-checkbox-tick: (width: 16px, height: 12px, backgroundX: -32px, backgroundY: -32px),
@@ -8,6 +8,8 @@ popup-close: (width: 26px, height: 26px, backgroundX: -123px, backgroundY: -94px
 presentation: (width: 16px, height: 16px, backgroundX: -149px, backgroundY: -120px),
 select2-arrow: (width: 14px, height: 9px, backgroundX: -165px, backgroundY: -136px),
 select2-arrow-active: (width: 14px, height: 9px, backgroundX: -179px, backgroundY: -145px),
-text: (width: 16px, height: 16px, backgroundX: -193px, backgroundY: -154px),
-video: (width: 16px, height: 16px, backgroundX: -209px, backgroundY: -170px),
+slider-arrow-left: (width: 8px, height: 12px, backgroundX: -193px, backgroundY: -154px),
+slider-arrow-right: (width: 8px, height: 12px, backgroundX: -201px, backgroundY: -166px),
+text: (width: 16px, height: 16px, backgroundX: -209px, backgroundY: -178px),
+video: (width: 16px, height: 16px, backgroundX: -225px, backgroundY: -194px),
 );

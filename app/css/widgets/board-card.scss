@@ -1,6 +1,6 @@
 .board-card {
   margin-top: 1px;
-  padding: 10px 66px 10px 30px;
+  padding: 13px 66px 15px 30px;
   display: flex;
   align-items: center;
   background: $color-white;
@@ -47,7 +47,7 @@
   }
 
   &__stamps {
-    margin: 0 60px;
+    margin: 0 64px;
     flex: 0 0 39px;
     max-width: 39px;
     text-align: center;

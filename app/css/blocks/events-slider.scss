@@ -1,0 +1,68 @@
+.events-slider {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgb(229 234 243 / 80%);
+
+  &__nav {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #F5F6FA;
+    border-radius: 100%;
+    z-index: 2;
+    @include align(false, true);
+    @include transition;
+
+    &:hover {
+      background: darken(#F5F6FA, 5%);
+    }
+
+    &:before {
+      content: '';
+      @include align;
+    }
+
+    &--prev {
+      left: 15px;
+
+      &:before {
+        @include sprite('slider-arrow-left')
+      }
+    }
+
+    &--next {
+      right: 15px;
+
+      &:before {
+        @include sprite('slider-arrow-right')
+
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    @include align(true, false);
+
+    &-bullet {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: $color-gray;
+      border-radius: 100%;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      &.swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

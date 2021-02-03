@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination, Scrollbar} from "swiper";
+import Swiper, {Navigation, Pagination} from "swiper";
 
 class EventsSlider extends Widget {
   constructor(node) {
