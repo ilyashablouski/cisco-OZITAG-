@@ -7,12 +7,10 @@
     line-height: 44px;
   }
 
-  &__inner {
-    margin-top: 28px;
-  }
 
   &__cards {
     margin: 0 -10px;
+    margin-top: 28px;
     display: flex;
   }
 
@@ -22,5 +20,22 @@
     max-width: 16.66%;
   }
 
+  &__container {
+    margin: 0 -10px;
+    margin-top: 20px;
+    display: flex;
 
+  }
+
+  &__block {
+    padding: 0 10px;
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    &-item {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
 }

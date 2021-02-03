@@ -1,0 +1,65 @@
+.event-slide {
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
+
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  &__inner {
+    margin-top: 24px;
+    display: flex;
+  }
+
+  &__img {
+    flex: 0 0 72px;
+    max-width: 72px;
+    height: 72px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &__info {
+    margin-left: 20px;
+
+    &-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &-text {
+      margin-top: 10px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &-bottom {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #e7e9ed;
+      display: flex;
+    }
+
+    &-label {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      color: $color-gray;
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+}

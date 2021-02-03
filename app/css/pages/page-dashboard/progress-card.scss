@@ -1,3 +1,48 @@
 .progress-card {
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
 
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__diagram {
+    margin-top: 16px;
+    margin-right: 68px;
+    display: inline-flex;
+  }
+
+  &__info {
+    border-left: 1px solid #e7e9ed;
+    padding-left: 60px;
+
+    &-item {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      &-title {
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 44px;
+        color: $color-ocean-blue;
+      }
+
+      &-label {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: $color-gray;
+      }
+    }
+  }
 }
