@@ -78,7 +78,70 @@
     </div>
 
     <div class="dashboard__block">
+      <div class="dashboard__board">
+        <div class="dashboard__board-header">
+          <span class="dashboard__board-title">Leader Board</span>
+          <a class="dashboard__board-link">See All</a>
+        </div>
 
+        <div class="dashboard__board-content">
+          {{> widgets/board-card
+                  number=1
+                  img="users/user_02"
+                  name="Tiana George"
+                  passed="7"
+                  country-name="United States"
+          }}
+
+          {{> widgets/board-card
+                  number=2
+                  img="users/user_02"
+                  name="Charlie Siphron"
+                  passed="7"
+                  country-name="India"
+          }}
+
+          {{> widgets/board-card
+                  number=3
+                  img="users/user_03"
+                  name="Ann Saris"
+                  passed="6"
+                  country-name="Italy"
+          }}
+
+          {{> widgets/board-card
+                  number=4
+                  img="users/user_04"
+                  name="Jordyn Culhane"
+                  passed="5"
+                  country-name="Argentina"
+          }}
+
+          {{> widgets/board-card
+                  number=5
+                  img="users/user_05"
+                  name="Kianna Press"
+                  passed="5"
+                  country-name="Germany"
+          }}
+
+          {{> widgets/board-card
+                  number=6
+                  img="users/user_06"
+                  name="Kaiya Culhane"
+                  passed="5"
+                  country-name="Indonesia"
+          }}
+
+          {{> widgets/board-card
+                  number=7
+                  img="users/user_07"
+                  name="Maren Herwitz"
+                  passed="5"
+                  country-name="Australia"
+          }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

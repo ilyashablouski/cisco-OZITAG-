@@ -16,6 +16,7 @@
 
   &:hover {
     background: $color-primary-hover;
+    color: $color-white;
   }
 
   &--secondary {
@@ -63,7 +64,7 @@
     color: $color-white;
 
     &:hover {
-      color: $color-yellow-hover;
+      background: $color-yellow-hover;
     }
   }
 }
