@@ -1,34 +1,82 @@
 .progress-card {
-  padding: 30px 30px 38px;
+  padding: 30px 30px 26px;
   background: #FFFFFF;
   box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
   border-radius: 10px;
+
+  @include mobile {
+    padding: 20px;
+    padding-bottom: 32px;
+  }
 
   &__title {
     font-weight: normal;
     font-size: 22px;
     line-height: 30px;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
 
   &__inner {
-    margin-top: 19px;
+    margin-top: 17px;
+    align-items: center;
     display: flex;
 
+    @include smallTablet-and-mobile {
+      justify-content: space-evenly;
+    }
+
+    @include mobile {
+      margin-top: 16px;
+    }
   }
 
   &__diagram {
     margin-top: 5px;
-    margin-left: 1px;
-    margin-right: 73px;
+    margin-right: 59px;
+    width: 149px;
+
+
+    @include smallTablet-and-mobile {
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+    @include mobile {
+      margin-right: 30px;
+      width: 119px;
+    }
+  }
+
+  &__separator {
+    display: block;
+    width: 1px;
+    height: 166px;
+    background: #e7e9ed;
   }
 
   &__info {
-    border-left: 1px solid #e7e9ed;
-    padding-left: 60px;
+    margin-left: 60px;
+
+    @include smallTablet-and-mobile {
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    @include mobile {
+      margin-left: 30px;
+    }
 
     &-item {
       &:not(:first-child) {
         margin-top: 20px;
+
+        @include mobile {
+          margin-top: 16px;
+        }
       }
 
       &-title {
@@ -36,6 +84,12 @@
         font-size: 32px;
         line-height: 44px;
         color: $color-ocean-blue;
+
+        @include mobile {
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
 
       &-label {
@@ -43,6 +97,12 @@
         font-size: 18px;
         line-height: 25px;
         color: $color-gray;
+
+        @include mobile {
+          margin-top: 2px;
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
     }
   }

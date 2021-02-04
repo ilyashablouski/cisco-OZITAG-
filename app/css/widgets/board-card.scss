@@ -1,5 +1,4 @@
 .board-card {
-  margin-top: 1px;
   padding: 13px 66px 15px 30px;
   display: flex;
   align-items: center;
@@ -9,8 +8,13 @@
     padding: 13px 30px 15px 30px;
   }
 
+  @include mobile {
+    padding: 14px 20px;
+    position: relative;
+  }
+
   &:not(:last-child) {
-    box-shadow: 0 1px 0 #E7E9ED;
+    border-bottom: 1px solid #e7e9ed;
   }
 
   &__number {
@@ -27,6 +31,10 @@
     display: flex;
     align-items: center;
     flex: 1 1 auto;
+
+    @include mobile {
+      margin-left: 9px;
+    }
 
     &-img {
       flex: 0 0 32px;
@@ -47,6 +55,10 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
+
+      @include mobile {
+        margin-top: -15px;
+      }
     }
   }
 
@@ -59,6 +71,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+
+    @include mobile {
+      margin: 0;
+      text-align: left;
+    }
   }
 
   &__country-name {
@@ -69,5 +86,15 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+
+    @include mobile {
+      position: absolute;
+      left: 93px;
+      top: 33px;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-gray;
+    }
   }
 }

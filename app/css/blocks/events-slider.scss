@@ -5,6 +5,10 @@
   border-radius: 10px;
   box-shadow: 0 20px 40px rgb(229 234 243 / 80%);
 
+  @include smallTablet-and-mobile {
+    max-width: none;
+  }
+
   &__nav {
     position: absolute;
     width: 30px;
@@ -14,6 +18,10 @@
     z-index: 2;
     @include align(false, true);
     @include transition;
+
+    @include mobile {
+      display: none;
+    }
 
     &:hover {
       background: darken(#F5F6FA, 5%);

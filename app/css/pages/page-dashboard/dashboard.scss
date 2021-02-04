@@ -1,10 +1,22 @@
 .dashboard {
   margin-top: 39px;
+  @include smallTablet-and-mobile {
+    margin-bottom: 44px;
+  }
+
+  @include mobile {
+    margin-top: 30px;
+  }
 
   &__title {
     font-weight: bold;
     font-size: 32px;
     line-height: 44px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 33px;
+    }
   }
 
 
@@ -22,6 +34,10 @@
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
       }
+    }
+
+    @include mobile {
+      margin-top: 30px;
     }
 
     scrollbar-width: thin;
@@ -54,10 +70,7 @@
   }
 
   &__container {
-    //margin: 0 -10px;
     margin-top: 20px;
-    //display: flex;
-    //flex-direction: column;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -73,16 +86,11 @@
   }
 
   &__block {
-    //padding: 0 10px;
-
-
-    //&-item {
-    //  &:not(:first-child) {
-    //    margin-top: 20px;
-    //  }
-    //}
     &:not(:first-child) {
-      margin-top: 20px;
+
+      @include smallTablet-and-mobile {
+        margin-top: 20px;
+      }
     }
 
     &:nth-child(1) {
@@ -121,12 +129,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include mobile {
+        padding: 20px 20px 0;
+      }
     }
 
     &-title {
       font-weight: normal;
       font-size: 22px;
       line-height: 30px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
 
     &-link {
@@ -137,7 +154,10 @@
 
     &-content {
       margin-top: 20px;
-      padding-bottom: 45px;
+
+      @include mobile {
+        margin-top: 7px;
+      }
     }
   }
 }

@@ -1,19 +1,36 @@
 .event-slide {
-  padding: 30px;
-  padding-bottom: 61px;
-  //max-width: 580px;
+  padding: 34px 30px 30px;
   background: #FFFFFF;
+
+  @include mobile {
+    padding: 20px;
+  }
 
   &__title {
     font-weight: normal;
     font-size: 22px;
     line-height: 30px;
+
+    @include mobile() {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   &__inner {
     margin: 25px auto 0;
     display: flex;
     max-width: 449px;
+
+    @include smallTablet-and-mobile {
+      padding-bottom: 42px;
+      max-width: 600px;
+    }
+
+    @include mobile {
+      margin-top: 13px;
+      max-width: none;
+    }
   }
 
   &__img {
@@ -24,19 +41,38 @@
     border-radius: 100%;
     overflow: hidden;
 
+    @include mobile {
+      max-width: 40px;
+      height: 40px;
+    }
+
     img {
       width: 72px;
       height: 72px;
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   &__info {
     margin-left: 20px;
 
+    @include mobile {
+      margin-left: 10px;
+    }
+
     &-title {
       font-weight: bold;
       font-size: 18px;
       line-height: 25px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
 
     &-text {
@@ -44,6 +80,11 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
 
     &-bottom {

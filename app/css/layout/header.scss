@@ -5,6 +5,10 @@
   height: 72px;
   z-index: 3;
 
+  @include smallTablet-and-mobile {
+    height: 68px;
+  }
+
   &__logo {
     margin-left: 22px;
     @include sprite('logo-small');

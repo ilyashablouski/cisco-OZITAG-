@@ -29,7 +29,7 @@
     color: $color-gray;
 
     &:not(:first-child) {
-      margin-top: 44px;
+      margin-top: 48px;
     }
 
     @include smallTablet-and-mobile {
@@ -39,19 +39,26 @@
     }
 
     &-img {
-      display: block;
+      display: flex;
       font-size: 24px;
+      justify-content: center;
     }
 
     &-label {
-      margin-top: 10px;
-      display: block;
+      margin-top: 13px;
+      display: inline-flex;
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
 
       @include smallTablet-and-mobile {
         margin-top: 0;
+      }
+
+      @include mobile {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 16px;
       }
     }
 
