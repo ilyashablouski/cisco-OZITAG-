@@ -5,6 +5,10 @@
   align-items: center;
   background: $color-white;
 
+  @include no-desktop {
+    padding: 13px 30px 15px 30px;
+  }
+
   &:not(:last-child) {
     box-shadow: 0 1px 0 #E7E9ED;
   }
