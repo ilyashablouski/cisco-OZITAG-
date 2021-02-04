@@ -1,5 +1,5 @@
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding-top: 267px;
@@ -11,12 +11,31 @@
   background: #fff;
   z-index: 2;
 
+  @include smallTablet-and-mobile {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 70px;
+  }
+
   &__btn {
     text-align: center;
     color: $color-gray;
 
     &:not(:first-child) {
       margin-top: 44px;
+    }
+
+    @include smallTablet-and-mobile {
+      &:not(:first-child) {
+        margin-top: 0;
+      }
     }
 
     &-img {
@@ -30,6 +49,10 @@
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
+
+      @include smallTablet-and-mobile {
+        margin-top: 0;
+      }
     }
 
     &.active {

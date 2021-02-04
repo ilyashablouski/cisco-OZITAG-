@@ -1,8 +1,8 @@
 .event-slide {
   padding: 30px;
   padding-bottom: 61px;
+  //max-width: 580px;
   background: #FFFFFF;
-  border-radius: 10px;
 
   &__title {
     font-weight: normal;
@@ -11,8 +11,7 @@
   }
 
   &__inner {
-    margin: 0 auto;
-    margin-top: 24px;
+    margin: 25px auto 0;
     display: flex;
     max-width: 449px;
   }

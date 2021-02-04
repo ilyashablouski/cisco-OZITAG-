@@ -22,9 +22,13 @@
 
   &__main {
     width: 100%;
-    min-height: 100vh;
     background: #f5f7fb;
     padding-left: 100px;
+
+    @include smallTablet-and-mobile {
+      padding-left: 0;
+      padding-bottom: 70px;
+    }
   }
 
   &__footer {
