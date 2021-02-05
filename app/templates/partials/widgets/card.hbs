@@ -1,7 +1,13 @@
-<div class="card {{#ifCond card-size "large"}}card--large{{/ifCond}}">
+<div class="card {{#ifCond card-size "large"}}card--large {{#if not-active}}card--not-active{{/if}}{{/ifCond}}">
   {{#if img}}
     <div class="card__image">
-      {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/' img '-mobile') ext="jpg"}}
+      {{#if not-active}}
+        {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india_gray-mobile')
+                ext="jpg"}}
+      {{else}}
+        {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india-mobile')
+                ext="jpg"}}
+      {{/if}}
     </div>
   {{/if}}
   <div class="card__content">
@@ -33,7 +39,7 @@
       {{/if}}
 
       {{#if inprogress}}
-        In progress
+        In Progress
       {{/if}}
   </span>
   </div>

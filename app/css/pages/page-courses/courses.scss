@@ -52,6 +52,18 @@
     @include mobile {
       flex: 0 0 50%;
       max-width: 50%;
+
+      &:nth-child(8) {
+        display: none;
+      }
+
+      &:nth-child(9) {
+        display: none;
+      }
+
+      &:nth-child(10) {
+        display: none;
+      }
     }
 
     @include mobile576 {
