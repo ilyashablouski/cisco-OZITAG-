@@ -105,6 +105,8 @@
   }
 
   &--large {
+    filter: none;
+    box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
     @include mobile576 {
       border-radius: 15px 15px 10px 10px;
     }

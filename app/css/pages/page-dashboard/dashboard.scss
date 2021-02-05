@@ -25,6 +25,7 @@
     margin-top: 26px;
     display: flex;
     overflow-x: auto;
+    filter: drop-shadow(0px 20px 40px rgba(229, 234, 243, 0.8));
     @include no-desktop {
       &::-webkit-scrollbar {
         display: none;
