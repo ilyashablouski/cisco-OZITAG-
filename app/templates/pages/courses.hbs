@@ -2,5 +2,11 @@
 
 {{> layout/head page-title="Courses" }}
 {{> layout/header }}
+{{> layout/nav courses=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/page-courses/courses}}
+  </div>
+</div>
 
 {{> layout/footer }}
