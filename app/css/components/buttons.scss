@@ -67,4 +67,15 @@
       background: $color-yellow-hover;
     }
   }
+
+  &--light-blue {
+    background: $color-light-blue;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-light-blue-hover;
+      color: $color-primary;
+    }
+  }
+
 }

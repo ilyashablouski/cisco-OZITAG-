@@ -1,15 +1,21 @@
 <div class="courses">
   <span class="courses__title">Courses</span>
-
-  <div class="courses__cards">
-    <div class="courses__card">
-      {{> widgets/card
-              flag-icon="flags/flag_india"
-              title="About India Culture"
-              completed=true
-              bottom-label="Video materials"
-              label-icon='video'
-      }}
+  <div class="courses__inner">
+    <div class="courses__cards">
+      {{#times 10}}
+        <div class="courses__card">
+          {{> widgets/card
+                  card-size="large"
+                  img="course_india"
+                  flag-icon="flags/flag_india"
+                  title="About India Culture"
+                  completed=true
+                  btn-bottom=true
+                  bottom-label="Video materials"
+                  label-icon='video'
+          }}
+        </div>
+      {{/times}}
     </div>
   </div>
 </div>

@@ -1,4 +1,9 @@
-<div class="card">
+<div class="card {{#ifCond card-size "large"}}card--large{{/ifCond}}">
+  {{#if img}}
+    <div class="card__image">
+      {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/' img '-mobile') ext="jpg"}}
+    </div>
+  {{/if}}
   <div class="card__content">
     <div class="card__top">
       {{#if flag-icon}}
@@ -38,5 +43,21 @@
             label-icon 'text'}}--text{{/ifCond}}{{#ifCond label-icon 'presentation'}}--presentation{{/ifCond}}">
       {{bottom-label}}
     </span>
+
+    {{#if btn-bottom}}
+      <div class="card__bottom-btn">
+        {{#if incompleted}}
+          {{> ui/btn label="Start"}}
+        {{/if}}
+
+        {{#if inprogress}}
+          {{> ui/btn color="yellow" label="Continue"}}
+        {{/if}}
+
+        {{#if completed}}
+          {{> ui/btn color="light-blue" label="Revisit"}}
+        {{/if}}
+      </div>
+    {{/if}}
   </div>
 </div>

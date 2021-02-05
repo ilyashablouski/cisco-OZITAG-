@@ -1,6 +1,24 @@
 .card {
   background: #FFFFFF;
   border-radius: 10px;
+  overflow: hidden;
+
+  &__image {
+    position: relative;
+    padding-top: 51.43%;
+    background: $color-gray;
+
+    @include mobile {
+      padding-top: 42.98%;
+    }
+
+    img {
+      position: absolute;
+      @include align;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
 
   &__content {
     padding: 17px;
@@ -42,6 +60,7 @@
   &__bottom {
     padding: 12px 16px;
     display: flex;
+    align-items: center;
     border-top: 1px solid #E7E9ED;
 
     &-label {
@@ -78,6 +97,20 @@
 
       }
     }
+
+    &-btn {
+      margin-left: auto;
+      padding-left: 10px;
+    }
   }
 
+  &--large {
+    @include mobile576 {
+      border-radius: 15px 15px 10px 10px;
+    }
+
+    @media screen and (max-width: 414px) {
+      border-radius: 10px;
+    }
+  }
 }

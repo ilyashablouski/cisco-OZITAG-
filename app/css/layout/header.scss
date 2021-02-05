@@ -9,15 +9,26 @@
     height: 68px;
   }
 
+  @include mobile {
+    padding: 0 20px;
+  }
+
   &__logo {
     margin-left: 22px;
     @include sprite('logo-small');
+
+    @include mobile {
+      margin-left: 0;
+    }
   }
 
   &__user {
-    margin-right: 40px;
+    margin-right: 55px;
     display: flex;
     align-items: center;
+    @include mobile {
+      margin-right: 0;
+    }
 
     &-img {
       width: 32px;
