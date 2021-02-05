@@ -64,6 +64,12 @@
       height: 6px;
       background: $color-gray;
       border-radius: 100%;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        background: darken($color-gray, 5%);
+      }
 
       &:not(:first-child) {
         margin-left: 10px;
