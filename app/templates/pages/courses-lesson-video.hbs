@@ -1,6 +1,16 @@
 {{!Courses lesson video}}
 
-{{> layout/head page-title="Courses lesson video" }}
+{{> layout/head page-title="Courses" }}
 {{> layout/header }}
+{{> layout/nav courses=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/lessons/lesson-page
+            title="About India Culture"
+            lesson-video=true
+    }}
+  </div>
+</div>
 
 {{> layout/footer }}
+

@@ -1,0 +1,26 @@
+.btn-arrow {
+  padding-left: 36px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-gray;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+
+  &:hover {
+    color: $color-gray-hover;
+
+    &:before {
+      transform: translateX(-3px) translateY(-50%);
+    }
+  }
+
+  &:before {
+    content: '';
+    @include sprite('arrow-left');
+    left: 0;
+    @include align(false, true);
+    @include transition;
+  }
+}
