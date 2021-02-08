@@ -3,6 +3,7 @@
   margin-top: 39px;
   @include smallTablet-and-mobile {
     margin-bottom: 44px;
+    padding-bottom: 0;
   }
 
   @include mobile {
