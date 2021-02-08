@@ -1,6 +1,15 @@
 {{!Courses lesson pdf}}
 
-{{> layout/head page-title="Courses lesson pdf" }}
+{{> layout/head page-title="Lesson document" }}
 {{> layout/header }}
+{{> layout/nav courses=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/lessons/lesson-page
+            title="About Australia Culture"
+            lesson-document=true
+    }}
+  </div>
+</div>
 
 {{> layout/footer }}

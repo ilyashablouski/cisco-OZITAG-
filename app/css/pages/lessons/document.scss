@@ -1,28 +1,21 @@
-.presentation {
-  background: $color-white;
-  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
-  border-radius: 10px;
+.document {
+  &__header {
+    padding: 9px 30px;
+    border-radius: 10px 10px 0 0;
+    background: #494949;
 
-  &__inner {
-    position: relative;
-    padding: 59px 90px 40px;
-  }
-
-  &__content {
-    margin: 0 auto;
-    max-width: 589px;
-  }
-
-  &__image {
-    position: relative;
-    padding-top: 56.027%;
-
-
-    img {
-      min-width: 100%;
-      min-height: 100%;
-      @include align;
+    &-title {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: #F5F7FB;
     }
+  }
+
+  &__body {
+    position: relative;
+    padding: 12px 0;
+    background: $color-dark;
   }
 
   &__nav {
@@ -61,6 +54,11 @@
     }
   }
 
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
   &__progress {
     position: relative;
     height: 4px;
@@ -80,12 +78,10 @@
 
   &__controls {
     padding: 20px 30px;
-    display: flex;
-    align-items: center;
     background: $color-white;
     border-radius: 0 0 10px 10px;
 
-    &-slides {
+    &-pages {
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
@@ -96,27 +92,12 @@
       }
     }
 
-    &-download {
-      margin-left: auto;
-      @include sprite('download');
-      @include transition;
-      cursor: pointer;
+    &__download {
 
-      &:hover {
-        opacity: 0.8;
-      }
     }
 
     &-full-screen {
-      margin-left: 20px;
-      @include sprite('full-screen-btn');
-      @include transition;
-      cursor: pointer;
 
-      &:hover {
-        opacity: 0.8;
-      }
     }
   }
-
 }
