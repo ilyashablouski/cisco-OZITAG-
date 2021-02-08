@@ -6,6 +6,10 @@
   &__inner {
     position: relative;
     padding: 59px 90px 40px;
+
+    @include mobile {
+      padding: 30px 48px 19px;
+    }
   }
 
   &__content {
@@ -16,6 +20,10 @@
   &__image {
     position: relative;
     padding-top: 56.027%;
+
+    @include mobile {
+      padding-top: 56.48%;
+    }
 
 
     img {
@@ -45,7 +53,7 @@
     }
 
     &--prev {
-      left: 30px;
+      left: 5px;
 
       &:before {
         @include sprite('slider-arrow-left');
@@ -53,7 +61,7 @@
     }
 
     &--next {
-      right: 30px;
+      right: 5px;
 
       &:before {
         @include sprite('slider-arrow-right');
@@ -90,6 +98,11 @@
       font-size: 14px;
       line-height: 19px;
       color: $color-gray;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 16px;
+      }
 
       &-passed {
         color: $color-dark;

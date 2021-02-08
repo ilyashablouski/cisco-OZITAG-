@@ -95,6 +95,11 @@
       line-height: 19px;
       color: $color-gray;
 
+      @include mobile {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
       &-passed {
         color: $color-dark;
       }
