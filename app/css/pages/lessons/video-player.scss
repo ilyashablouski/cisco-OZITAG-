@@ -30,13 +30,20 @@
     }
 
     &-progress {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
+      position: relative;
       height: 4px;
       width: 100%;
-      background: $color-primary;
+      background: $color-gray;
+
+      &-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: $color-primary;
+      }
     }
   }
 
@@ -53,6 +60,11 @@
       height: 24px;
       cursor: pointer;
       z-index: 2;
+      @include transition;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     &-sound {
@@ -60,6 +72,11 @@
       @include sprite("sound-btn");
       cursor: pointer;
       z-index: 2;
+      @include transition;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     &-time {
@@ -75,6 +92,11 @@
       @include sprite("settings-btn");
       cursor: pointer;
       z-index: 2;
+      @include transition;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     &-full-screen {
@@ -82,6 +104,11 @@
       @include sprite("full-screen-btn");
       cursor: pointer;
       z-index: 2;
+      @include transition;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

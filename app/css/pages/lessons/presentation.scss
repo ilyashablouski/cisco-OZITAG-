@@ -1,3 +1,96 @@
 .presentation {
+  background: $color-white;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
+
+  &__inner {
+    position: relative;
+    padding: 59px 90px 40px;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 589px;
+  }
+
+  &__image {
+    position: relative;
+    padding-top: 56.027%;
+
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      @include align;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #F5F6FA;
+    border-radius: 100%;
+    @include align(false, true);
+
+    &:before {
+      content: '';
+      @include align;
+    }
+
+    &--prev {
+      &:before {
+        @include sprite('slider-arrow-left');
+      }
+    }
+
+    &--next {
+      &:before {
+        @include sprite('slider-arrow-right');
+      }
+    }
+  }
+
+  &__progress {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background: $color-gray;
+
+    &-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 4px;
+      width: 15%;
+      background: $color-primary;
+    }
+  }
+
+  &__controls {
+    padding: 20px 30px;
+    background: $color-white;
+    border-radius: 0 0 10px 10px;
+
+    &-slides {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-gray;
+
+      &-passed {
+        color: $color-dark;
+      }
+    }
+
+    &__download {
+
+    }
+
+    &-full-screen {
+
+    }
+  }
 
 }

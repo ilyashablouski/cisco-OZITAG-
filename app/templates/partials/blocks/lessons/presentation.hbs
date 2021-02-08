@@ -1,7 +1,26 @@
 <div class="presentation">
-  <div class="presentation__content">
-    <div class="presentation__image">
-      {{> components/image img="lessons/presentation_01" img-mobile="lessons/presentation_01-mobile" ext="jpg"}}
+  <div class="presentation__inner">
+    <div class="presentation__content">
+      <div class="presentation__image">
+        {{> components/image img="lessons/presentation_01" img-mobile="lessons/presentation_01-mobile" ext="jpg"}}
+      </div>
+      <i class="presentation__nav presentation__nav-prev"></i>
+      <i class="presentation__nav presentation__nav-next"></i>
+
     </div>
+  </div>
+  <div class="presentation__progress">
+    <i class="presentation__progress-bar"></i>
+  </div>
+
+  <div class="presentation__controls">
+    <div class="presentation__controls-slides">
+      Slide
+      <span class="presentation__controls-slides-passed">1</span>&nbsp;/&nbsp;<span
+            class="presentation__controls-slides-total">3</span>
+    </div>
+
+    <i class="presentation__controls-download"></i>
+    <i class="presentation__controls-full-screen"></i>
   </div>
 </div>
