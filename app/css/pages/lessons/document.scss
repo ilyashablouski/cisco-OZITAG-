@@ -1,4 +1,10 @@
 .document {
+  margin-top: -4px;
+
+  @include smallTablet-and-mobile {
+    margin-top: 0;
+  }
+
   &__header {
     padding: 9px 30px;
     border-radius: 10px 10px 0 0;
@@ -78,6 +84,8 @@
 
   &__controls {
     padding: 20px 30px;
+    display: flex;
+    align-items: center;
     background: $color-white;
     border-radius: 0 0 10px 10px;
 
@@ -92,12 +100,26 @@
       }
     }
 
-    &__download {
+    &-download {
+      margin-left: auto;
+      @include sprite('download');
+      @include transition;
+      cursor: pointer;
 
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     &-full-screen {
+      margin-left: 20px;
+      @include sprite('full-screen-btn');
+      @include transition;
+      cursor: pointer;
 
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
