@@ -2,28 +2,61 @@
   margin-top: 20px;
   margin-bottom: 40px;
 
-  &__back-link {
-
+  @include mobile {
+    margin-bottom: 57px;
   }
 
   &__main {
     margin-top: 60px;
     display: flex;
+
+    @include smallTablet-and-mobile {
+      margin-top: 40px;
+      display: block;
+    }
   }
 
   &__left {
     max-width: 770px;
+
+    @include smallTablet-and-mobile {
+      max-width: none;
+    }
+
+    .lesson-page__tip {
+      display: none;
+
+      @include smallTablet-and-mobile {
+        display: block;
+      }
+    }
   }
 
   &__right {
     margin-left: 100px;
     margin-top: -10px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+
+    .lesson-page__tip {
+      @include smallTablet-and-mobile {
+        display: none;
+      }
+    }
   }
 
   &__title {
     font-weight: bold;
     font-size: 32px;
     line-height: 44px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 33px;
+    }
   }
 
   &__text {
@@ -35,6 +68,12 @@
 
   &__content {
     margin-top: 30px;
+
+    @include smallTablet-and-mobile {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 770px;
+    }
   }
 
   &__informer {
@@ -45,6 +84,11 @@
     box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
     border-radius: 10px;
 
+    @include smallTablet-and-mobile {
+      padding: 20px;
+    }
+
+
     &-title {
       position: relative;
       display: inline-flex;
@@ -52,6 +96,11 @@
       font-weight: normal;
       font-size: 22px;
       line-height: 30px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 25px;
+      }
 
       &--with-icon {
         padding-right: 40px;
@@ -71,6 +120,11 @@
       font-size: 18px;
       line-height: 25px;
       color: $color-gray;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
 
     &-btn {
@@ -84,12 +138,22 @@
     background: $color-white;
     border-radius: 10px;
 
+    @include smallTablet-and-mobile {
+      margin-top: 30px;
+      width: 100%;
+    }
+
     &-title {
       position: relative;
       padding-left: 42px;
       font-weight: normal;
       font-size: 22px;
       line-height: 30px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 25px;
+      }
 
       &:before {
         content: '';

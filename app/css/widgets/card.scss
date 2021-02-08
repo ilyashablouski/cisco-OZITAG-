@@ -118,14 +118,6 @@
         transform: none;
       }
     }
-
-    @include mobile576 {
-      border-radius: 15px 15px 10px 10px;
-    }
-
-    @media screen and (max-width: 414px) {
-      border-radius: 10px;
-    }
   }
 
   &--not-active {

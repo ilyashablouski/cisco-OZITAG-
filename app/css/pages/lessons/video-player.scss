@@ -7,6 +7,10 @@
   &__content {
     position: relative;
     padding-top: 55.97%;
+
+    @include mobile {
+      padding-top: 56.119%;
+    }
   }
 
   &__video {
@@ -16,16 +20,39 @@
     min-height: 100%;
 
     &-play {
-      @include sprite("play-btn");
-      @include align;
+      width: 68px;
+      height: 68px;
+      background: #F5F6FA;
+      border-radius: 100%;
       cursor: pointer;
+      @include align;
+
+      &:before {
+        content: "";
+        @include sprite("play-btn");
+        @include align;
+
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
 
-    &-reload {
+    &-repeat {
       @include mobile {
-        @include sprite("reload-btn-small");
-        @include align;
+        width: 48px;
+        height: 48px;
+        background: #F5F6FA;
+        border-radius: 100%;
         cursor: pointer;
+        @include align;
+        &:before {
+          content: "";
+          @include sprite("repeat");
+          @include align;
+
+        }
       }
     }
 
@@ -44,6 +71,11 @@
         width: 100%;
         background: $color-primary;
       }
+    }
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
     }
   }
 
