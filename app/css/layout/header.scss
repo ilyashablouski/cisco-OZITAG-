@@ -1,10 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 72px;
+  padding-left: 100px;
   background: $color-white;
   z-index: 4;
 
@@ -17,17 +14,36 @@
     padding: 0 20px;
   }
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    border-left: 1px solid #e7e9ed;
+
+    @include smallTablet-and-mobile {
+      border-left: none;
+    }
+  }
+
   &__logo {
+    position: absolute;
+    left: 0;
     margin-left: 22px;
+    @include align(false, true);
     @include sprite('logo-small');
 
+    @include smallTablet {
+      margin-left: 30px;
+    }
+
     @include mobile {
-      margin-left: 0;
+      margin-left: 20px;
     }
   }
 
   &__user {
     margin-right: 55px;
+    margin-left: auto;
     display: flex;
     align-items: center;
     @include mobile {
