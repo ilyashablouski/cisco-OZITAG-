@@ -10,11 +10,21 @@
     border-radius: 10px 10px 0 0;
     background: #494949;
 
+    @include mobile {
+      padding: 6px 16px;
+      display: flex;
+    }
+
     &-title {
       font-weight: normal;
       font-size: 14px;
       line-height: 19px;
       color: #F5F7FB;
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 14px;
+      }
     }
   }
 
@@ -22,6 +32,10 @@
     position: relative;
     padding: 12px 0;
     background: $color-dark;
+
+    @include mobile {
+      padding: 8px 0 0;
+    }
   }
 
   &__nav {
@@ -45,6 +59,9 @@
 
     &--prev {
       left: 30px;
+      @include mobile {
+        left: 16px;
+      }
 
       &:before {
         @include sprite('slider-arrow-left');
@@ -53,6 +70,9 @@
 
     &--next {
       right: 30px;
+      @include mobile {
+        right: 16px;
+      }
 
       &:before {
         @include sprite('slider-arrow-right');
@@ -88,6 +108,10 @@
     align-items: center;
     background: $color-white;
     border-radius: 0 0 10px 10px;
+
+    @include mobile {
+      padding: 14px 16px;
+    }
 
     &-pages {
       font-weight: normal;
