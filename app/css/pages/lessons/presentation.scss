@@ -39,12 +39,16 @@
     }
 
     &--prev {
+      left: 30px;
+
       &:before {
         @include sprite('slider-arrow-left');
       }
     }
 
     &--next {
+      right: 30px;
+
       &:before {
         @include sprite('slider-arrow-right');
       }
