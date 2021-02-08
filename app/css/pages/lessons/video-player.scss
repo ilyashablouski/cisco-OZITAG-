@@ -28,6 +28,16 @@
         cursor: pointer;
       }
     }
+
+    &-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: $color-primary;
+    }
   }
 
   &__controls {
@@ -58,14 +68,6 @@
       font-size: 14px;
       line-height: 19px;
       color: $color-gray;
-
-      &-passed {
-
-      }
-
-      &-total {
-
-      }
     }
 
     &-settings {
