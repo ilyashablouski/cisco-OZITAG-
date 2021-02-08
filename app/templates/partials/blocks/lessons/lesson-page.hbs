@@ -20,14 +20,28 @@
         {{#if lesson-video}}
           {{> blocks/lessons/video-player}}
         {{/if}}
+
+        {{#if lesson-presentation}}
+          {{> blocks/lessons/presentation}}
+        {{/if}}
       </div>
 
       <div class="lesson-page__informer">
         {{#if lesson-video}}
-          <span class="lesson-page__informer-title">This course is completed!</span>
+          <span class="lesson-page__informer-title lesson-page__informer-title--with-icon">This course is
+            completed!</span>
           <p class="lesson-page__informer-text">You have finished the course and earned your passport stamp for
             India.</p>
         {{/if}}
+
+        {{#when lesson-presentation "||" lesson-document}}
+          <span class="lesson-page__informer-title">Did you complete this course?</span>
+          <p class="lesson-page__informer-text">Press button below to complete once you have finished the course and
+            earn your passport stamp for India.</p>
+          <div class="lesson-page__informer-btn">
+            {{> ui/btn size="large" label="Complete Course"}}
+          </div>
+        {{/when}}
       </div>
 
     </div>

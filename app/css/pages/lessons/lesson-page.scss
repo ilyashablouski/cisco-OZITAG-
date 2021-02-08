@@ -16,7 +16,7 @@
   }
 
   &__right {
-
+    margin-left: 100px;
   }
 
   &__title {
@@ -46,18 +46,21 @@
 
     &-title {
       position: relative;
-      padding-right: 40px;
       display: inline-flex;
       align-items: center;
       font-weight: normal;
       font-size: 22px;
       line-height: 30px;
 
-      &:after {
-        content: ' ';
-        @include sprite('flag-india-small');
-        @include align(false, true);
-        right: 0;
+      &--with-icon {
+        padding-right: 40px;
+
+        &:after {
+          content: ' ';
+          @include sprite('flag-india-small');
+          @include align(false, true);
+          right: 0;
+        }
       }
     }
 
@@ -68,10 +71,13 @@
       line-height: 25px;
       color: $color-gray;
     }
+
+    &-btn {
+      margin-top: 27px;
+    }
   }
 
   &__tip {
-    margin-left: 100px;
     padding: 24px;
     width: 300px;
     background: $color-white;

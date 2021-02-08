@@ -1,6 +1,15 @@
 {{!Courses lesson ppt}}
 
-{{> layout/head page-title="Courses lesson ppt" }}
+{{> layout/head page-title="Lesson presentation" }}
 {{> layout/header }}
+{{> layout/nav courses=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/lessons/lesson-page
+            title="About Italy Culture"
+            lesson-presentation=true
+    }}
+  </div>
+</div>
 
 {{> layout/footer }}
