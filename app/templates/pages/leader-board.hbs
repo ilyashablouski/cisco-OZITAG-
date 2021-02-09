@@ -1,7 +1,13 @@
 {{!Leader board}}
 
-{{> layout/head page-title="Leader boards" }}
+{{> layout/head page-title="Leader board" }}
 {{> layout/header }}
+{{> layout/nav leaders=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/page-leader/leader-board}}
+  </div>
+</div>
 
 {{> layout/footer }}
 

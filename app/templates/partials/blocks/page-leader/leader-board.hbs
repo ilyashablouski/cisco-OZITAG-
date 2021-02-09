@@ -1,0 +1,47 @@
+<div class="leader-board">
+  <div class="leader-board__left">
+    {{> blocks/page-leader/user-card}}
+  </div>
+
+  <div class="leader-board__right">
+    <div class="leader-board__top">
+      <div class="leader-board__search">
+        {{> ui/search-input }}
+      </div>
+
+      <div class="leader-board__filter-buttons">
+        <div class="leader-board__filter-button active">
+          {{> ui/btn mod="btn--rectangle" label="All Time"}}
+        </div>
+        <div class="leader-board__filter-button">
+          {{> ui/btn mod="btn--rectangle" outline=true label="Week"}}
+
+        </div>
+        <div class="leader-board__filter-button">
+          {{> ui/btn mod="btn--rectangle" outline=true label="Month"}}
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="leader-board__board">
+      {{> blocks/page-leader/board-header}}
+
+      <div class="leader-board__main">
+        {{#times 13}}
+          {{> blocks/page-leader/leader-card
+                  large=true
+                  number=1
+                  img="page-leader/learner_01"
+                  name="Chance Philips"
+                  passed=8
+                  team-name="Digital Lifecycle Journeys"
+                  country-name="United States"
+          }}
+        {{/times}}
+      </div>
+
+    </div>
+  </div>
+</div>

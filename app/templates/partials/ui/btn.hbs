@@ -2,7 +2,8 @@
   <button type="{{#if type}}{{type}}{{else}}button{{/if}}"
           class="btn{{#if size}} btn--{{size}}{{/if}}{{#if color}} btn--{{color}}{{/if}}{{#if
                   outline}} btn--outline{{/if}}{{#if icon}} btn--icon{{/if}}{{#if
-                  btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{mod}}"
+                  btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{mod}}{{#if
+                  w100}}btn--w100{{/if}}"
     {{#if popup}} data-popup="{{popup}}"{{/if}}
     {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}
     {{#if disabled}} disabled aria-disabled="true"{{/if}}
@@ -11,7 +12,7 @@
   <a href="{{#if href}}{{href}}{{else}}#{{/if}}"
      class="btn{{#if size}} btn--{{size}}{{/if}}{{#if color}} btn--{{color}}{{/if}}{{#if
              outline}} btn--outline{{/if}}{{#if icon}} btn--icon{{/if}}{{#if
-             btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{mod}}"
+             btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{mod}}{{#if w100}}btn--w100{{/if}}"
     {{#if popup}} data-popup="{{popup}}"{{/if}}
     {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}
     {{#if disabled}} disabled aria-disabled="true"{{/if}}

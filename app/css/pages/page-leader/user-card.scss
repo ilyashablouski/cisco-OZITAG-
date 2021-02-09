@@ -1,0 +1,67 @@
+.user-card {
+  padding: 24px 24px 30px;
+  background: $color-white;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img {
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+    &-inner {
+      margin-left: 17px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &-label {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-gray;
+    }
+  }
+
+  &__inner {
+    margin-top: 20px;
+    border-top: 1px solid #E7E9ED;
+  }
+
+  &__info {
+    margin-top: 20px;
+
+    &-title {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-gray;
+    }
+
+    &-text {
+      margin-top: 4px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+  }
+}

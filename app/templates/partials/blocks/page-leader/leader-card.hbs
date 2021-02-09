@@ -1,0 +1,22 @@
+<div class="leader-card {{#if large}}leader-card--large{{/if}}">
+  <span class="leader-card__number">{{number}}.</span>
+  <div class="leader-card__learner">
+    <div class="leader-card__learner-img">{{> components/image img=img ext="jpg"}}</div>
+    <div class="leader-card__learner-name">{{name}}</div>
+  </div>
+
+  <div class="leader-card__stamps">
+    <span class="leader-card__stamps-passed">{{passed}}</span>&nbsp;/&nbsp;<span
+          class="leader-card__stamps-total">8</span>
+  </div>
+
+  {{#if team-name}}
+    <div class="leader-card__team-name">
+      {{team-name}}
+    </div>
+  {{/if}}
+
+  <div class="leader-card__country-name">
+    {{country-name}}
+  </div>
+</div>

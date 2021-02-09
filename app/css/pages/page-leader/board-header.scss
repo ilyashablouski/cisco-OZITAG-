@@ -1,0 +1,78 @@
+.board-header {
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  background: $color-white;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
+
+  &__btn {
+    position: relative;
+    padding-right: 22px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    @include transition;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:after {
+      content: '';
+      @include sprite('filter-arrows');
+      @include align(false, true);
+      right: 0;
+    }
+
+    &--icon {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: #F5F6FA;
+      border-radius: 100%;
+
+      &:before {
+        content: '';
+        @include sprite('filter-all');
+        @include align;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        background: darken(#F5F6FA, 5%);
+      }
+    }
+  }
+
+  &__number {
+    flex: 0 1 67px;
+    max-width: 67px;
+  }
+
+  &__learner {
+    margin: 0 10px;
+    flex: 0 1 207px;
+    max-width: 207px;
+  }
+
+  &__stamps {
+    margin: 0 10px;
+    flex: 0 1 126px;
+    max-width: 126px;
+  }
+
+  &__team {
+    margin: 0 10px;
+    flex: 0 1 238px;
+    max-width: 238px;
+  }
+
+  &__country {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}

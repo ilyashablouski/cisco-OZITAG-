@@ -1,5 +1,5 @@
-.board-card {
-  padding: 13px 66px 15px 30px;
+.leader-card {
+  padding: 20px 30px 20px 37px;
   display: flex;
   align-items: center;
   background: $color-white;
@@ -18,19 +18,19 @@
   }
 
   &__number {
-    flex: 0 0 22px;
-    max-width: 22px;
-    font-family: 'Montserrat', sans-serif;
+    flex: 0 1 60px;
+    max-width: 60px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
   }
 
-  &__user {
-    margin-left: 20px;
+  &__learner {
+    margin: 0 10px;
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
+    flex: 0 1 212px;
+    max-width: 212px;
 
     @include mobile {
       margin-left: 9px;
@@ -52,7 +52,7 @@
 
     &-name {
       margin-left: 10px;
-      font-weight: normal;
+      font-weight: bold;
       font-size: 14px;
       line-height: 19px;
 
@@ -63,11 +63,9 @@
   }
 
   &__stamps {
-    margin: 0 64px;
-    flex: 0 0 39px;
-    max-width: 39px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0 10px;
+    flex: 0 1 126px;
+    max-width: 126px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -79,15 +77,17 @@
   }
 
   &__team-name {
+    margin: 0 10px;
+    flex: 0 1 238px;
+    max-width: 238px;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
   }
 
   &__country-name {
-    flex: 0 0 102px;
-    max-width: 102px;
-    font-family: 'Montserrat', sans-serif;
+    flex: 1 1 auto;
+    max-width: none;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -101,40 +101,6 @@
       font-size: 10px;
       line-height: 14px;
       color: $color-gray;
-    }
-  }
-
-  &--large {
-    padding: 20px 30px 20px 37px;
-
-    .board-card__user-name {
-      font-weight: bold;
-    }
-
-    .board-card__number {
-      flex: 0 1 60px;
-      max-width: 60px;
-    }
-
-    .board-card__user {
-      flex: 0 1 212px;
-      max-width: 212px;
-    }
-
-    .board-card__stamps {
-      margin: 0;
-      flex: 0 1 126px;
-      max-width: 126px;
-    }
-
-    .board-card__team-name {
-      flex: 0 1 238px;
-      max-width: 238px;
-    }
-
-    .board-card__country-name {
-      flex: 1 1 auto;
-      max-width: none;
     }
   }
 }

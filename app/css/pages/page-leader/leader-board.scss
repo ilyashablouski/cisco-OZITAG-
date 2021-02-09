@@ -1,0 +1,43 @@
+.leader-board {
+  margin-top: 40px;
+  margin-bottom: 106px;
+  display: flex;
+
+  &__left {
+    max-width: 280px;
+  }
+
+  &__right {
+    margin-left: 20px;
+    flex: 1 1 auto;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    flex: 1 1 380px;
+    max-width: 380px;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__filter-button {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__board {
+    margin-top: 20px;
+  }
+
+  &__main {
+    margin-top: 10px;
+  }
+}
