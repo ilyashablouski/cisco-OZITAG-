@@ -1,7 +1,11 @@
 .leader-board {
   margin-top: 40px;
-  margin-bottom: 106px;
+  margin-bottom: 40px;
   display: flex;
+
+  @include mobile {
+    padding-bottom: 118px;
+  }
 
   &__left {
     max-width: 280px;
@@ -39,5 +43,34 @@
 
   &__main {
     margin-top: 10px;
+    margin-right: -14px;
+    padding-right: 10px;
+    max-height: 770px;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: $color-gray transparent;
+
+    /* для Chrome/Edge/Safari */
+    &::-webkit-scrollbar {
+      height: 66px;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-gray;
+      border-radius: 10px;
+      width: 4px;
+    }
   }
+
+  //&__wrapper {
+  //  padding-right: 37px;
+  //  max-height: 770px;
+  //  overflow-y: auto;
+  //}
 }
