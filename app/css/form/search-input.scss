@@ -22,7 +22,7 @@
     line-height: 22px;
     background: #F8F9FC;
     color: $color-dark;
-    border: 1px solid #DBE0E7;
+    border: 1px solid $color-input-border;
     border-radius: 10px;
     @include transition;
 
@@ -31,7 +31,7 @@
     }
 
     @include placeholder {
-      color: $color-gray;
+      color: $color-placeholder;
     }
 
     &:focus {

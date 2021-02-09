@@ -1,3 +1,27 @@
 <div class="info-form">
+  <div class="info-form__input">
+    {{> ui/input placeholder="Name" value="Alex Bernard"}}
+  </div>
+  <div class="info-form__group">
+    <div class="info-form__select">
+      {{#> ui/select id="select_country"}}
+        <option value="0">India</option>
+        <option value="1">Argentina</option>
+        <option value="2" selected>United States</option>
+        <option value="3">Italy</option>
+        <option value="4">Indonesia</option>
+      {{/ui/select}}
+    </div>
+    <div class="info-form__select">
+      {{#> ui/select id="select_team"}}
+        <option value="0">Team 1</option>
+        <option value="1">Team 2</option>
+        <option value="2" selected>Team 3</option>
+      {{/ui/select}}
+    </div>
+  </div>
 
+  <div class="info-form__textarea">
+
+  </div>
 </div>
