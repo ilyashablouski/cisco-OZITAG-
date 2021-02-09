@@ -1,5 +1,5 @@
 .leader-card {
-  padding: 20px 30px 20px 37px;
+  padding: 14px 37px 14px 35px;;
   display: flex;
   align-items: center;
   background: $color-white;
@@ -18,8 +18,8 @@
   }
 
   &__number {
-    flex: 0 1 60px;
-    max-width: 60px;
+    flex: 0 1 78px;
+    max-width: 78px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -29,8 +29,8 @@
     margin: 0 10px;
     display: flex;
     align-items: center;
-    flex: 0 1 212px;
-    max-width: 212px;
+    flex: 0 1 215px;
+    max-width: 215px;
 
     @include mobile {
       margin-left: 9px;
@@ -64,8 +64,8 @@
 
   &__stamps {
     margin: 0 10px;
-    flex: 0 1 126px;
-    max-width: 126px;
+    flex: 0 1 105px;
+    max-width: 105px;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -78,8 +78,8 @@
 
   &__team-name {
     margin: 0 10px;
-    flex: 0 1 238px;
-    max-width: 238px;
+    flex: 0 1 229px;
+    max-width: 229px;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
