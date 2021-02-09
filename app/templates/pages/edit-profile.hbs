@@ -2,6 +2,15 @@
 
 {{> layout/head page-title="Edit profile" }}
 {{> layout/header }}
+{{> layout/nav leaders=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/profile/profile-page
+            title="Edit Profile"
+            edit=true
+    }}
+  </div>
+</div>
 
 {{> layout/footer }}
 

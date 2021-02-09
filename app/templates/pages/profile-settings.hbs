@@ -2,6 +2,15 @@
 
 {{> layout/head page-title="Profile settings" }}
 {{> layout/header }}
+{{> layout/nav leaders=true}}
+<div class="page__main">
+  <div class="container">
+    {{> blocks/profile/profile-page
+            title="Profile Settings"
+            settings=true
+    }}
+  </div>
+</div>
 
 {{> layout/footer }}
 

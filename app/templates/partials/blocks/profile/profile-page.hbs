@@ -1,0 +1,39 @@
+<div class="profile-page">
+  <div class="profile-page__back-link">
+    {{> ui/btn-arrow href="/html/leader-board" label="Back to Leader Board"}}
+  </div>
+
+  <div class="profile-page__title">
+    {{title}}
+  </div>
+
+  <div class="profile-page__main">
+
+    <div class="profile-page__left">
+      <div class="avatar-card">
+        <div class="avatar-card__img">
+          {{> components/image img="profile/profile_avatar" img-mobile="profile/profile_avatar" ext="jpg"}}
+        </div>
+        <span class="avatar-card__name">Alex Bernard</span>
+        {{#if edit}}
+          <span class="avatar-card__label">Change Photo</span>
+        {{/if}}
+      </div>
+    </div>
+    <div class="profile-page__right">
+      <div class="profile-details">
+        <span class="profile-details__title">Personal Details</span>
+        <div class="profile-details__content">
+          {{#if settings}}
+
+          {{/if}}
+
+          {{#if edit}}
+
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
