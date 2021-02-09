@@ -1,6 +1,5 @@
 .leader-board {
   margin-top: 40px;
-  margin-bottom: 40px;
   display: flex;
 
   @include smallTablet-and-mobile {
@@ -55,6 +54,12 @@
   &__filter-button {
     &:not(:first-child) {
       margin-left: 10px;
+    }
+
+    &.active .btn {
+      &:hover {
+        background: $color-primary;
+      }
     }
   }
 
