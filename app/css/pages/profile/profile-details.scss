@@ -1,3 +1,39 @@
 .profile-details {
+  padding: 30px 30px 40px;
+  background: $color-white;
+  box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+  border-radius: 10px;
 
+  &__title {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  &__content {
+    margin-top: 30px;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    &-link {
+      color: $color-primary;
+      white-space: nowrap;
+
+      &:hover {
+        color: $color-primary-hover;
+      }
+    }
+
+    &:last-child {
+      margin-left: 30px;
+      flex: 1 1 236px;
+      max-width: 236px;
+    }
+  }
 }

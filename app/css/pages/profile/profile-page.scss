@@ -14,10 +14,13 @@
   }
 
   &__left {
+    flex: 0 0 280px;
     max-width: 280px;
   }
 
   &__right {
     margin-left: 20px;
+    flex: 1 1 580px;
+    max-width: 580px;
   }
 }

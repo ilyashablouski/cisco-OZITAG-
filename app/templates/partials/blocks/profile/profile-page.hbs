@@ -16,7 +16,7 @@
         </div>
         <span class="avatar-card__name">Alex Bernard</span>
         {{#if edit}}
-          <span class="avatar-card__label">Change Photo</span>
+          <a href="#" class="avatar-card__label">Change Photo</a>
         {{/if}}
       </div>
     </div>
@@ -25,12 +25,18 @@
         <span class="profile-details__title">Personal Details</span>
         <div class="profile-details__content">
           {{#if settings}}
-
+            {{> blocks/profile/info-block}}
           {{/if}}
 
           {{#if edit}}
-
+            {{> blocks/profile/info-form}}
           {{/if}}
+        </div>
+
+        <div class="profile-details__buttons">
+          <div class="profile-details__button"><a href="#" class="profile-details__button-link">Reset Password</a></div>
+          <div class="profile-details__button">{{> ui/btn size="large" w100=true label="Edit Details"}}</div>
+
         </div>
       </div>
     </div>

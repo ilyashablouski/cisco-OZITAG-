@@ -1,0 +1,26 @@
+.info-block {
+  &__row {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__label {
+    flex: 0 0 74px;
+    max-width: 74px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-gray;
+  }
+
+  &__title {
+    margin-left: 60px;
+    flex: 1 1 auto;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
