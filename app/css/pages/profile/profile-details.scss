@@ -4,14 +4,26 @@
   box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
   border-radius: 10px;
 
+  @include mobile {
+    padding: 20px 20px 30px;
+  }
+
   &__title {
     font-weight: normal;
     font-size: 22px;
     line-height: 30px;
+    @include mobile {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   &__content {
     margin-top: 30px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__buttons {
@@ -19,6 +31,16 @@
     padding-left: 134px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include smallTablet-and-mobile {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+    }
   }
 
   &__button {
@@ -31,10 +53,27 @@
       }
     }
 
+    &:first-child {
+      @include smallTablet-and-mobile {
+        margin-top: 20px;
+        order: 2;
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
     &:last-child {
       margin-left: 30px;
       flex: 1 1 236px;
       max-width: 236px;
+
+      @include smallTablet-and-mobile {
+        order: 1;
+        margin-left: 0;
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
+
   }
 }
