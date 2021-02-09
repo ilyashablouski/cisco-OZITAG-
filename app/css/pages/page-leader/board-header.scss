@@ -10,6 +10,10 @@
     padding: 16px 30px;
   }
 
+  @include mobile {
+    display: none;
+  }
+
   &__btn {
     position: relative;
     padding-right: 22px;

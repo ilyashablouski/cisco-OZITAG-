@@ -3,14 +3,25 @@
   display: flex;
   align-items: center;
   background: $color-white;
+  box-shadow: 0 1px 0 #E7E9ED;
 
   @include smallTablet-and-mobile {
     padding: 14px 30px;
   }
 
   @include mobile {
-    padding: 14px 20px;
+    padding: 10px 20px;
     position: relative;
+    min-height: 70px;
+    align-items: flex-start;
+
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px 10px;
+    }
   }
 
   &:not(:last-child) {
@@ -23,6 +34,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+
+    @include mobile {
+      flex: 0 1 22px;
+      max-width: 22px;
+    }
   }
 
   &__learner {
@@ -34,6 +50,8 @@
 
     @include mobile {
       margin-left: 9px;
+      flex: 0 1 auto;
+      max-width: none;
     }
 
     &-img {
@@ -58,6 +76,8 @@
 
       @include mobile {
         margin-top: -15px;
+        font-weight: normal;
+        white-space: nowrap;
       }
     }
   }
@@ -72,7 +92,19 @@
 
     @include mobile {
       margin: 0;
-      text-align: left;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    &-title {
+      margin-bottom: 3px;
+      display: block;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      @include no-mobile {
+        display: none;
+      }
     }
   }
 
@@ -88,6 +120,18 @@
       flex: 0 1 300px;
       max-width: 300px;
     }
+
+    @include mobile {
+      margin: 0;
+      position: absolute;
+      left: 94px;
+      top: 45px;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-gray;
+    }
+
   }
 
   &__country-name {
@@ -101,8 +145,8 @@
 
     @include mobile {
       position: absolute;
-      left: 93px;
-      top: 33px;
+      left: 94px;
+      top: 28px;
       font-weight: normal;
       font-size: 10px;
       line-height: 14px;
