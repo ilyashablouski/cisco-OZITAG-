@@ -1,63 +1,56 @@
 .pagination {
-  display: none;
-  @include mobile {
-    position: absolute;
-    bottom: 26px;
-    left: 0;
-    right: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    &__next {
-      margin-left: 13px;
-      @include sprite('pagination-arrow-next');
+  &__next {
+    margin-left: 13px;
+    @include sprite('pagination-arrow-next');
+  }
+
+  &__prev {
+    margin-right: 13px;
+    @include sprite('pagination-arrow-prev');
+  }
+
+  &__button {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    color: $color-gray;
+    @include transition;
+
+    &:nth-child(2) {
+      margin-left: 0;
     }
 
-    &__prev {
-      margin-right: 13px;
-      @include sprite('pagination-arrow-prev');
+    &:hover {
+      color: $color-black;
     }
 
-    &__button {
-      margin-left: 10px;
-      width: 24px;
-      height: 24px;
-      font-size: 14px;
-      color: $color-gray;
-      @include transition;
-
-      &:nth-child(2) {
-        margin-left: 0;
-      }
+    &--current {
+      background: $color-primary;
+      color: $color-white;
+      border-radius: 100%;
 
       &:hover {
-        color: $color-black;
-      }
-
-      &--current {
-        background: $color-primary;
         color: $color-white;
-        border-radius: 100%;
-
-        &:hover {
-          color: $color-white;
-        }
       }
     }
+  }
 
-    &__more {
-      margin-left: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 24px;
-      height: 12px;
+  &__more {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 24px;
+    height: 12px;
 
-      &:before {
-        content: "";
-        @include sprite('more-dots');
-      }
+    &:before {
+      content: "";
+      @include sprite('more-dots');
     }
   }
 }

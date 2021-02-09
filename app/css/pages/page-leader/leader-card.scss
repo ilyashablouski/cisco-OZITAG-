@@ -4,8 +4,8 @@
   align-items: center;
   background: $color-white;
 
-  @include no-desktop {
-    padding: 13px 30px 15px 30px;
+  @include smallTablet-and-mobile {
+    padding: 14px 30px;
   }
 
   @include mobile {
@@ -29,8 +29,8 @@
     margin: 0 10px;
     display: flex;
     align-items: center;
-    flex: 0 1 215px;
-    max-width: 215px;
+    flex: 0 1 212px;
+    max-width: 212px;
 
     @include mobile {
       margin-left: 9px;
@@ -83,15 +83,21 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
+
+    @include smallTablet {
+      flex: 0 1 300px;
+      max-width: 300px;
+    }
   }
 
   &__country-name {
-    flex: 1 1 auto;
-    max-width: none;
+    flex: 0 1 128px;
+    max-width: 128px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    white-space: nowrap;
 
     @include mobile {
       position: absolute;

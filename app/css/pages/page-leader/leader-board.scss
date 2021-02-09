@@ -3,22 +3,42 @@
   margin-bottom: 40px;
   display: flex;
 
+  @include smallTablet-and-mobile {
+    display: block;
+  }
+
   @include mobile {
+    position: relative;
+    margin-bottom: 0;
     padding-bottom: 118px;
   }
 
   &__left {
     max-width: 280px;
+
+    @include smallTablet-and-mobile {
+      max-width: none;
+    }
   }
 
   &__right {
     margin-left: 20px;
     flex: 1 1 auto;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+    }
   }
 
   &__top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    @include smallTablet-and-mobile {
+      display: none;
+    }
+
   }
 
   &__search {
@@ -28,7 +48,7 @@
 
   &__filter-buttons {
     display: flex;
-    margin-left: auto;
+    margin-left: 20px;
   }
 
   &__filter-button {
@@ -47,7 +67,6 @@
     padding-right: 10px;
     max-height: 770px;
     overflow-y: auto;
-
     scrollbar-width: thin;
     scrollbar-color: $color-gray transparent;
 
@@ -66,11 +85,30 @@
       border-radius: 10px;
       width: 4px;
     }
+
+    @include no-desktop {
+      margin-right: 0;
+      padding-right: 0;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
-  //&__wrapper {
-  //  padding-right: 37px;
-  //  max-height: 770px;
-  //  overflow-y: auto;
-  //}
+  &__pagination {
+    display: none;
+
+    @include mobile {
+      position: absolute;
+      bottom: 44px;
+      left: 0;
+      right: 0;
+      display: block;
+      text-align: center;
+    }
+
+  }
 }

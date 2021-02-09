@@ -71,4 +71,18 @@
       max-width: 100%;
     }
   }
+
+  &__pagination {
+    display: none;
+
+    @include mobile {
+      position: absolute;
+      bottom: 26px;
+      left: 0;
+      right: 0;
+      display: block;
+      text-align: center;
+    }
+
+  }
 }
