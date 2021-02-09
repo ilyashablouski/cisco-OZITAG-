@@ -31,10 +31,11 @@
     padding-left: 134px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+
 
     @include smallTablet-and-mobile {
       padding-left: 0;
+      flex-wrap: wrap;
       text-align: center;
     }
 

@@ -3,14 +3,40 @@
     margin: 0 -10px;
     margin-top: 20px;
     display: flex;
+
+    @include smallTablet-and-mobile {
+      display: block;
+    }
+
+    @include mobile {
+      margin-top: 10px;
+    }
   }
 
   &__select {
     padding: 0 10px;
     flex: 1 1 50%;
+
+    &:last-child {
+      @include smallTablet {
+        margin-top: 20px;
+      }
+
+      @include mobile {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__textarea {
     margin-top: 20px;
+
+    @include mobile {
+      textarea {
+        font-size: 16px;
+        line-height: 22px;
+        height: 137px;
+      }
+    }
   }
 }
