@@ -35,8 +35,15 @@
 
         <div class="profile-details__buttons">
           <div class="profile-details__button"><a href="#" class="profile-details__button-link">Reset Password</a></div>
-          <div class="profile-details__button">{{> ui/btn size="large" w100=true label="Edit Details"}}</div>
+          <div class="profile-details__button">
+            {{#if settings}}
+              {{> ui/btn size="large" w100=true label="Edit Details"}}
+            {{/if}}
 
+            {{#if edit}}
+              {{> ui/btn size="large" w100=true label="Save Changes"}}
+            {{/if}}
+          </div>
         </div>
       </div>
     </div>
