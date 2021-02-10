@@ -12,27 +12,41 @@
 
 
       <div class="authorization-page__wrapper">
-        {{#if single-email-input}}
-          <div class="authorization-page__form-group">
-            <div class="authorization-page__input">
-              {{> ui/input placeholder="Email"}}
-            </div>
-          </div>
-
-
-        {{else}}
+        {{#if sign-in}}
           <div class="authorization-page__form-group">
             <div class="authorization-page__input">
               {{> ui/input placeholder="Email"}}
             </div>
             <div class="authorization-page__input">
-              {{> ui/input placeholder="Password"}}
+              {{> ui/input placeholder="Password" type="password"}}
             </div>
             <div class="authorization-page__form-btn">
               <a href="#" class="authorization-page__form-btn-link">Forgot Password?</a>
             </div>
           </div>
         {{/if}}
+
+        {{#if single-email-input}}
+          <div class="authorization-page__form-group">
+            <div class="authorization-page__input">
+              {{> ui/input placeholder="Email"}}
+            </div>
+          </div>
+        {{/if}}
+
+        {{#if two-password-input}}
+          <div class="authorization-page__form-group">
+            <div class="authorization-page__input">
+              {{> ui/input placeholder="New Password"}}
+            </div>
+
+            <div class="authorization-page__input">
+              {{> ui/input placeholder="Repeat Password"}}
+            </div>
+          </div>
+        {{/if}}
+
+
 
         <div class="authorization-page__buttons">
           {{#when confirmation '||' sign-in }}
