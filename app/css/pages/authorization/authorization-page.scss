@@ -64,6 +64,12 @@
       background: transparent;
       color: $color-dark;
     }
+
+    &--mobile {
+      @include mobile {
+        margin-top: 32px;
+      }
+    }
   }
 
   &__form-group {
@@ -111,6 +117,10 @@
     @include mobile {
       margin-top: 60px;
       flex-direction: column;
+    }
+
+    &--mobile {
+      margin-top: 40px;
     }
   }
 

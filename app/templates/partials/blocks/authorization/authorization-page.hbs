@@ -6,7 +6,8 @@
         <span class="authorization-page__title">{{title}}</span>
 
         <div class="authorization-page__wrapper">
-          <span class="authorization-page__label">{{{label}}}</span>
+          <span class="authorization-page__label {{#if
+                  confirmation}}authorization-page__label--mobile{{/if}}">{{{label}}}</span>
         </div>
       {{/if}}
 
@@ -46,9 +47,7 @@
           </div>
         {{/if}}
 
-
-
-        <div class="authorization-page__buttons">
+        <div class="authorization-page__buttons {{#if confirmation}}authorization-page__buttons--mobile{{/if}}">
           {{#when confirmation '||' sign-in }}
             <div class="authorization-page__button authorization-page__button--single">
               {{> ui/btn size="large" label="Sign In" w100=true}}
