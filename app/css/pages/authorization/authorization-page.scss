@@ -1,0 +1,76 @@
+.authorization-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 492px;
+  }
+
+  &__main {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  &__content {
+    margin-top: 60px;
+
+    @include mobile {
+      margin-top: 102px;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+    @include sprite('logo-large');
+  }
+
+  &__input {
+    &:not(:first-child) {
+      margin-top: 10px;
+
+      @include mobile {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__form-btn {
+    margin-top: 10px;
+    text-align: right;
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    &-link {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      color: $color-gray;
+      @include transition;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 30px;
+    @include mobile {
+      margin-top: 60px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    max-width: 236px;
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+}
