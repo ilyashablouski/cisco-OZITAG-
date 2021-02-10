@@ -1,0 +1,37 @@
+<div class="authorization-page">
+  <div class="authorization-page__main">
+    <a href="" class="authorization-page__logo"></a>
+    {{#if password}}
+      <span class="authorization-page__title">{{title}}</span>
+      <span class="authorization-page__label">{{label}}</span>
+    {{/if}}
+
+    <div class="authorization-page__form-group">
+      <div class="authorization-page__input">
+        {{> ui/input placeholder="Email"}}
+      </div>
+      <div class="authorization-page__input">
+        {{> ui/input placeholder="Password"}}
+      </div>
+
+      <a href="#" class="authorization-page__form-link">Forgot Password?</a>
+    </div>
+
+    <div class="authorization-page__buttons">
+      {{#when confirmation '||' sign-in }}
+        <div class="authorization-page__button">
+          {{> ui/btn size="large" label="Sign In" w100=true}}
+        </div>
+      {{else}}
+        <div class="authorization-page__button">
+          {{> ui/btn size="large" outline=true label="Cancel" w100=true}}
+        </div>
+
+        <div class="authorization-page__button">
+          {{> ui/btn size="large" label=btn-right-label w100=true}}
+        </div>
+      {{/when}}
+    </div>
+  </div>
+</div>
+

@@ -1,7 +1,10 @@
 {{!Sign in}}
 
-{{> layout/head page-title="Sign in" }}
-{{> layout/header }}
+{{> layout/head page-title="Sign in" authorization=true}}
 
-{{> layout/footer }}
+{{> blocks/authorization/authorization-page
+        sign-in=true
+}}
+
+{{> layout/bottom}}
 
