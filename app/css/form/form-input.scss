@@ -21,7 +21,7 @@
     }
   }
 
-  input {
+  input, textarea {
     &:focus::-webkit-input-placeholder {
       color: transparent;
     }
