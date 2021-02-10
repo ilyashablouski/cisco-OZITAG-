@@ -1,8 +1,9 @@
 .progress-card {
-  padding: 30px 30px 26px;
+  padding: 30px;
   background: #FFFFFF;
   box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
   border-radius: 10px;
+  height: 100%;
 
   @include mobile {
     padding: 20px;
@@ -21,7 +22,7 @@
   }
 
   &__inner {
-    margin-top: 17px;
+    margin-top: 14px;
     align-items: center;
     display: flex;
 
@@ -97,6 +98,7 @@
         font-size: 18px;
         line-height: 25px;
         color: $color-gray;
+        white-space: nowrap;
 
         @include mobile {
           margin-top: 2px;

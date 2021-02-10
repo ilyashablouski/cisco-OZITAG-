@@ -1,9 +1,10 @@
 .event-slide {
-  padding: 34px 30px 30px;
-  background: #FFFFFF;
+  margin-bottom: 34px;
+  padding: 30px 30px 0;
 
   @include mobile {
-    padding: 20px;
+    margin-bottom: 30px;
+    padding: 20px 20px 0;
   }
 
   &__title {
@@ -18,16 +19,16 @@
   }
 
   &__inner {
-    margin: 25px auto 0;
+    margin: 24px 32px 0;
     display: flex;
     max-width: 449px;
 
     @include smallTablet-and-mobile {
-      padding-bottom: 42px;
-      max-width: 600px;
+      max-width: none;
     }
 
     @include mobile {
+      margin: 0;
       margin-top: 13px;
       max-width: none;
     }
@@ -59,6 +60,7 @@
 
   &__info {
     margin-left: 20px;
+    width: 100%;
 
     @include mobile {
       margin-left: 10px;
