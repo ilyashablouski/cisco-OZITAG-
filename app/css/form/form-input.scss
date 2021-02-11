@@ -48,13 +48,26 @@
     resize: none;
     height: 157px;
     line-height: 25px;
+    overflow-y: auto;
 
+    scrollbar-width: thin;
+    scrollbar-color: $color-gray transparent;
+
+    /* для Chrome/Edge/Safari */
     &::-webkit-scrollbar {
-      display: none;
+      height: 66px;
+      width: 4px;
     }
 
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-gray;
+      border-radius: 10px;
+      width: 4px;
+    }
   }
 
   &--icon {

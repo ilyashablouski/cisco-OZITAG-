@@ -1,5 +1,4 @@
 .form-select {
-
   .select2 {
     width: 100% !important;
     display: block;
@@ -38,6 +37,7 @@
         @include sprite('select2-arrow');
         right: 24px;
         @include align(false, true);
+        @include transition(0.3s);
       }
     }
 
