@@ -120,6 +120,13 @@
       }
     }
 
+    @include mobile {
+      .btn {
+        width: 100px;
+        text-align: center;
+      }
+    }
+
     .card__bottom {
       padding: 16px;
     }
