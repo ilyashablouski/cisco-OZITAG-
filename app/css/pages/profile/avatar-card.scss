@@ -30,14 +30,28 @@
     }
   }
 
-  &__label {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: $color-primary;
+  &__change {
+    position: relative;
+    display: inline-flex;
 
-    &:hover {
-      color: $color-primary-hover;
+    &-input {
+      opacity: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+    &-button {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-primary;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: $color-primary-hover;
+      }
     }
   }
 }
