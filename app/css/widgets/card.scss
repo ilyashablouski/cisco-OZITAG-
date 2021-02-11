@@ -120,8 +120,8 @@
       }
     }
 
-    @include mobile {
-      .btn {
+    .btn {
+      @include mobile {
         width: 100px;
         text-align: center;
       }
@@ -133,6 +133,10 @@
 
     .card__title {
       margin-top: 24px;
+
+      @include smallTablet {
+        font-size: 17px;
+      }
     }
   }
 
@@ -149,6 +153,5 @@
         z-index: 2;
       }
     }
-
   }
 }
