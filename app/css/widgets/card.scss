@@ -6,7 +6,7 @@
 
   &__image {
     position: relative;
-    padding-top: 51.43%;
+    padding-top: 51.45%;
     background: $color-gray;
 
     @include mobile {
@@ -15,7 +15,8 @@
 
     img {
       position: absolute;
-      @include align;
+      top: 0;
+      left: 0;
       min-width: 100%;
       min-height: 100%;
     }
@@ -108,10 +109,15 @@
   &--large {
     filter: none;
     box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
     @include transition;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.05) translateZ(0) translate3d(0, 0, 0);
     }
 
     @include tablet-and-mobile {
@@ -133,10 +139,17 @@
 
     .card__title {
       margin-top: 24px;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
 
       @include smallTablet {
         font-size: 17px;
       }
+    }
+
+    .card__status {
+      backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
     }
   }
 
