@@ -57,8 +57,13 @@
   }
 
   &__number {
-    flex: 0 1 78px;
-    max-width: 78px;
+    flex: 0 1 84px;
+    max-width: 84px;
+
+    @include smallTablet {
+      flex: 0 1 60px;
+      max-width: 60px;
+    }
   }
 
   &__learner {
@@ -85,7 +90,7 @@
   }
 
   &__country {
-    flex: 0 1 128px;
-    max-width: 128px;
+    flex: 0 1 123px;
+    max-width: 123px;
   }
 }
