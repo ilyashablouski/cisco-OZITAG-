@@ -145,6 +145,9 @@
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(229, 234, 243, 0.8);
   display: block;
+  @include mobile {
+    box-shadow: 0 20px 40px rgba(82, 102, 142, 0.1);
+  }
 
   .select2-results__options {
     max-height: 250px;

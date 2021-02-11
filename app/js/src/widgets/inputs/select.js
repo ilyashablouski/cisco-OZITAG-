@@ -35,31 +35,6 @@ class Select extends Widget {
     this.$container.classList.remove('focus');
   }
 
-  // enableMobileMode() {
-  //   this.$node.addEventListener('change', this.onChange);
-  //   this.$node.addEventListener('focus', this.onFocus);
-  //   this.$node.addEventListener('blur', this.onBlur);
-  //
-  //   const optionSelected = this.$node.querySelector('option[selected]');
-  //   const hasInitialValue = !this.placeholder || (optionSelected && optionSelected.innerText.length > 0);
-  //
-  //   this.$node.classList.remove('visually-hidden');
-  //   this.$container.classList.add('mobile');
-  //
-  //   if (this.placeholder && hasInitialValue === false) {
-  //     const $mobilePlaceholder = document.createElement('span');
-  //     $mobilePlaceholder.classList.add('select-placeholder');
-  //     $mobilePlaceholder.innerText = this.placeholder;
-  //     this.$container.append($mobilePlaceholder);
-  //   }
-  //
-  //   if (hasInitialValue) {
-  //     this.setAsSelected();
-  //   } else {
-  //     this.setAsNotSelected();
-  //   }
-  // }
-
   initSelect2(placeholder) {
     $(this.$node).select2({
       minimumResultsForSearch: -1,
@@ -106,11 +81,7 @@ class Select extends Widget {
   }
 
   build() {
-    // if (isMobileOrTablet() && this.withSearch === false) {
-    //   this.enableMobileMode();
-    // } else {
     this.enableDesktopMode();
-    // }
   }
 
   setAsSelected() {
