@@ -21,7 +21,7 @@
           {{> ui/btn label="Start"}}
         {{/if}}
         {{#if inprogress}}
-          {{> ui/btn color="yellow" label="Continue"}}
+          {{> ui/btn href="courses-lesson-ppt.html" color="yellow" label="Continue"}}
         {{/if}}
       {{/if}}
     </div>
@@ -57,11 +57,11 @@
         {{/if}}
 
         {{#if inprogress}}
-          {{> ui/btn color="yellow" label="Continue"}}
+          {{> ui/btn href="courses-lesson-pdf.html" color="yellow" label="Continue"}}
         {{/if}}
 
         {{#if completed}}
-          {{> ui/btn color="light-blue" label="Revisit"}}
+          {{> ui/btn href="courses-lesson-video.html" color="light-blue" label="Revisit"}}
         {{/if}}
       </div>
     {{/if}}
