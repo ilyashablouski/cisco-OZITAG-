@@ -74,7 +74,7 @@
     position: relative;
 
     input {
-      padding-left: 46px;
+      padding-left: 60px;
     }
   }
 
@@ -82,8 +82,8 @@
     position: relative;
 
     input {
-      padding-left: 20px;
-      padding-right: 46px;
+      padding-left: 24px;
+      padding-right: 60px;
     }
   }
 
@@ -95,16 +95,29 @@
     pointer-events: none;
     margin-top: -1px;
 
-    left: 20px;
+    left: 24px;
 
     .form-input--icon-right & {
-      right: 20px;
+      right: 24px;
       left: auto;
     }
 
     //&--date {
     //  @include sprite('input-date');
     //}
+
+    &--check-mark {
+      @include sprite('check-mark');
+    }
   }
 
+  &--valid {
+    input {
+      border: 1px solid $color-green;
+
+      &:focus {
+        border-color: $color-green;
+      }
+    }
+  }
 }

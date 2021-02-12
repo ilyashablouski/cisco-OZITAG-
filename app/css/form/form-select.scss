@@ -135,11 +135,16 @@
 
 .select2-dropdown {
   background: #FFFFFF;
-
   border-radius: 10px;
 
   &.select2-dropdown--above {
-    border-radius: 10px;
+    position: relative;
+    bottom: 8px;
+  }
+
+  &.select2-dropdown--below {
+    position: relative;
+    top: 8px;
   }
 
   overflow: hidden;

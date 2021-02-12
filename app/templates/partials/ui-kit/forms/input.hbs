@@ -1,31 +1,14 @@
 {{#> core/ui-kit/blocks/widget title='.form-input' width=350}}
-  {{#> ui/field label="Input" id="input_01" note="Note"}}
+  {{#> ui/field note="Input related info text" id="input_01"}}
     {{> ui/input id="input_01" placeholder="Placeholder"}}
   {{/ui/field}}
 {{/core/ui-kit/blocks/widget}}
 
-{{#> core/ui-kit/blocks/widget title='.form-input (With Icon)' width=350}}
-  {{#> ui/field label="Input with icon" id="input_02"}}
-    {{> ui/input id="input_02" placeholder="Placeholder" icon="date"}}
+{{#> core/ui-kit/blocks/widget title='.form-input (Email valid)' width=350}}
+  {{#> ui/field note="Input related info text" id="input_06"}}
+    {{> ui/input id="input_05" placeholder="Email" value="hello.admin@gmail.com" mod="form-input--valid"
+            icon="check-mark"
+            icon-position="right"}}
   {{/ui/field}}
 {{/core/ui-kit/blocks/widget}}
-
-{{#> core/ui-kit/blocks/widget title='.form-input (With Icon on right)' width=350}}
-  {{#> ui/field label="Input with icon" id="input_02"}}
-    {{> ui/input id="input_02" placeholder="Placeholder" icon="date" icon-position="right"}}
-  {{/ui/field}}
-{{/core/ui-kit/blocks/widget}}
-
-{{#> core/ui-kit/blocks/widget title='.form-input (Numeric)' width=350}}
-  {{#> ui/field label="Numeric Input" id="input_03"}}
-    {{> ui/input id="input_03" numeric=true placeholder="Placeholder"}}
-  {{/ui/field}}
-{{/core/ui-kit/blocks/widget}}
-
-{{#> core/ui-kit/blocks/widget title='.form-input (Date)' width=350}}
-  {{#> ui/field label="Date Input" id="input_05"}}
-    {{> ui/input id="input_05" placeholder="Placeholder" date=true icon="date" icon-position="right"}}
-  {{/ui/field}}
-{{/core/ui-kit/blocks/widget}}
-
 
