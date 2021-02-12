@@ -21,7 +21,6 @@
     }
   }
 
-
   &__cards {
     margin-top: 26px;
     display: flex;
@@ -41,6 +40,9 @@
 
     @include mobile {
       margin-top: 30px;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
     }
 
     scrollbar-width: thin;
@@ -65,11 +67,18 @@
 
   &__card {
     &:not(:first-child) {
-      margin-left: 20px;
+      padding-left: 20px;
+      box-sizing: content-box;
     }
 
     flex: 0 0 180px;
     max-width: 180px;
+
+    &:last-child {
+      @include mobile {
+        padding-right: 20px;
+      }
+    }
   }
 
   &__container {
