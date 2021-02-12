@@ -32,7 +32,8 @@
 
   &__change {
     position: relative;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
 
     &-input {
       opacity: 0;
