@@ -5,10 +5,25 @@
 {{/core/ui-kit/blocks/widget}}
 
 {{#> core/ui-kit/blocks/widget title='.form-input (Email valid)' width=350}}
-  {{#> ui/field note="Input related info text" id="input_06"}}
-    {{> ui/input id="input_05" placeholder="Email" value="hello.admin@gmail.com" mod="form-input--valid"
+  {{#> ui/field note="Input related info text" id="input_02"}}
+    {{> ui/input id="input_02" placeholder="Email" value="hello.admin@gmail.com" mod="form-input--valid"
             icon="check-mark"
             icon-position="right"}}
+  {{/ui/field}}
+{{/core/ui-kit/blocks/widget}}
+
+{{#> core/ui-kit/blocks/widget title='.form-input (Email not valid)' width=350}}
+  {{#> ui/field error="Error message" id="input_03"}}
+    {{> ui/input id="input_03" placeholder="Email" value="Content" mod="form-input--error"
+            icon="error"
+            icon-position="right"}}
+  {{/ui/field}}
+{{/core/ui-kit/blocks/widget}}
+
+
+{{#> core/ui-kit/blocks/widget title='.form-input (Search)' width=350}}
+  {{#> ui/field id="input_07"}}
+    {{> ui/search-input }}
   {{/ui/field}}
 {{/core/ui-kit/blocks/widget}}
 

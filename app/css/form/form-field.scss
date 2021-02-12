@@ -29,4 +29,14 @@
     font-size: 14px;
     color: $color-gray;
   }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    color: $color-red;
+  }
 }

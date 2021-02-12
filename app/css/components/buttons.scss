@@ -32,6 +32,7 @@
     background: transparent;
     border: 1px solid $color-primary;
     color: $color-primary;
+    padding: 6px 18px;
 
     &:hover {
       background: $color-primary;
@@ -58,6 +59,11 @@
     padding: 19px 44px;
     font-weight: normal;
     font-size: 18px;
+
+    &.btn--outline {
+      padding: 17px 44px;
+      border: 2px solid $color-primary;
+    }
   }
 
   &--yellow {
@@ -91,5 +97,9 @@
     height: 50px;
     font-size: 18px;
     border-radius: 10px;
+
+    &.btn--outline {
+      padding: 11px 16px;
+    }
   }
 }

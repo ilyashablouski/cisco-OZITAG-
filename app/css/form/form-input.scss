@@ -109,6 +109,10 @@
     &--check-mark {
       @include sprite('check-mark');
     }
+
+    &--error {
+      @include sprite('error');
+    }
   }
 
   &--valid {
@@ -117,6 +121,16 @@
 
       &:focus {
         border-color: $color-green;
+      }
+    }
+  }
+
+  &--error {
+    input {
+      border: 1px solid $color-red;
+
+      &:focus {
+        border-color: $color-red;
       }
     }
   }
