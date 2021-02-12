@@ -40,10 +40,11 @@
         </div>
 
         <div class="profile-details__buttons">
-          <div class="profile-details__button"><a href="#" class="profile-details__button-link">Reset Password</a></div>
+          <div class="profile-details__button"><a href="restore-password-email.html"
+                                                  class="profile-details__button-link">Reset Password</a></div>
           <div class="profile-details__button">
             {{#if settings}}
-              {{> ui/btn size="large" w100=true label="Edit Details"}}
+              {{> ui/btn href="edit-profile.html" size="large" w100=true label="Edit Details"}}
             {{/if}}
 
             {{#if edit}}
