@@ -3,21 +3,20 @@
     {{> blocks/page-leader/user-card}}
   </div>
 
-  <div class="leader-board__right">
+  <div class="leader-board__right js-board-filter">
     <div class="leader-board__top">
       <div class="leader-board__search">
         {{> ui/search-input }}
       </div>
 
       <div class="leader-board__filter-buttons">
-        <div class="leader-board__filter-button active">
-          {{> ui/btn mod="btn--rectangle" label="All Time"}}
+        <div class="leader-board__filter-button js-board-filter__toggle active">
+          {{> ui/btn mod="btn--rectangle" outline=true label="All Time"}}
         </div>
-        <div class="leader-board__filter-button">
+        <div class="leader-board__filter-button js-board-filter__toggle">
           {{> ui/btn mod="btn--rectangle" outline=true label="Week"}}
-
         </div>
-        <div class="leader-board__filter-button">
+        <div class="leader-board__filter-button js-board-filter__toggle">
           {{> ui/btn mod="btn--rectangle" outline=true label="Month"}}
 
         </div>

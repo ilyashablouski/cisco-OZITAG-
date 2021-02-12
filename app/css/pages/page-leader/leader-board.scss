@@ -57,6 +57,9 @@
     }
 
     &.active .btn {
+      background: $color-primary;
+      color: $color-white;
+
       &:hover {
         background: $color-primary;
       }
