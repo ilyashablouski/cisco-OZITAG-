@@ -40,13 +40,18 @@
 
   &__nav {
     position: absolute;
+    top: 42.3%;
     width: 30px;
     height: 30px;
     background: #F5F6FA;
     border-radius: 100%;
-    @include align(false, true);
     cursor: pointer;
     @include transition;
+
+    @include mobile {
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     &:hover {
       background: darken(#F5F6FA, 5%);
