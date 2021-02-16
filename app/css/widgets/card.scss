@@ -8,6 +8,7 @@
     position: relative;
     padding-top: 51.45%;
     background: $color-gray;
+    overflow: hidden;
 
     @include mobile {
       padding-top: 42.98%;
