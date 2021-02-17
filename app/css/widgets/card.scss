@@ -170,5 +170,23 @@
         z-index: 2;
       }
     }
+
+    .card__top .icon {
+      position: relative;
+      display: inline-flex;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        background: rgba(30, 68, 113, .4);
+        border-radius: 10px;
+        z-index: 2;
+      }
+    }
   }
 }
