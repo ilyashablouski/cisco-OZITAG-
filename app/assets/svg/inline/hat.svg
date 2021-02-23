@@ -1,7 +1,8 @@
 <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="12.5" cy="16" rx="6.5" ry="4" fill="#9EA9B8"/>
-  <rect x="6" y="12" width="13" height="4" rx="1" fill="#9EA9B8"/>
+  <ellipse cx="12.5" cy="16" rx="6.5" ry="4" fill="currentColor"/>
+  <rect x="6" y="12" width="13" height="4" rx="1" fill="currentColor"/>
   <path
     d="M2.37695 7.16719C0.585058 7.75543 0.528576 10.2696 2.29224 10.9377L12.2915 14.7257C12.748 14.8986 13.252 14.8986 13.7085 14.7257L23.7078 10.9377C25.4714 10.2696 25.4149 7.75543 23.623 7.16719L13.6238 3.88464C13.2186 3.75161 12.7814 3.75161 12.3762 3.88464L2.37695 7.16719Z"
-    fill="#9EA9B8" stroke="white" stroke-width="2"/>
+    fill="currentColor" stroke="white" stroke-width="2"/>
 </svg>
+  leader-board

@@ -48,19 +48,27 @@
         {{/if}}
 
         <div class="authorization-page__buttons {{#if confirmation}}authorization-page__buttons--mobile{{/if}}">
-          {{#when confirmation '||' sign-in }}
+          {{#if sign-in }}
+            <div class="authorization-page__button authorization-page__button--single">
+              {{> ui/btn button=true type="submit" size="large" label="Sign In" w100=true}}
+            </div>
+          {{/if}}
+
+          {{#if confirmation}}
             <div class="authorization-page__button authorization-page__button--single">
               {{> ui/btn size="large" label="Sign In" w100=true}}
             </div>
-          {{else}}
+          {{/if}}
+
+          {{#if btn-right}}
             <div class="authorization-page__button">
               {{> ui/btn size="large" outline=true label="Cancel" w100=true}}
             </div>
 
             <div class="authorization-page__button">
-              {{> ui/btn size="large" label=btn-right w100=true}}
+              {{> ui/btn button=true type="submit" size="large" label=btn-right w100=true}}
             </div>
-          {{/when}}
+          {{/if}}
         </div>
       </div>
     </div>
