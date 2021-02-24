@@ -1,8 +1,14 @@
 .card {
+  position: relative;
   width: 100%;
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
+
+  &__link {
+    @include fill;
+    z-index: 3;
+  }
 
   &__image {
     position: relative;

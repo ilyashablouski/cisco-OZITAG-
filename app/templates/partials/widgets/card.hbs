@@ -1,4 +1,22 @@
 <div class="card {{#ifCond card-size "large"}}card--large {{#if not-active}}card--not-active{{/if}}{{/ifCond}}">
+  {{#when btn-top '||' flag-icon}}
+    {{#if inprogress}}
+      <a href="courses-lesson-ppt.html" class="card__link"></a>
+    {{/if}}
+
+    {{#if incompleted}}
+      <a href="#" class="card__link"></a>
+    {{/if}}
+
+    {{#if inprogress}}
+      <a href="courses-lesson-pdf.html" class="card__link"></a>
+    {{/if}}
+
+    {{#if completed}}
+      <a href="courses-lesson-video.html" class="card__link"></a>
+    {{/if}}
+  {{/when}}
+
   {{#if img}}
     <div class="card__image">
       {{#if not-active}}
