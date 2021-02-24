@@ -1,15 +1,10 @@
 .events-slider {
-  padding-bottom: 34px;
+  padding-bottom: 27px;
   position: relative;
   max-width: 580px;
   height: 96%;
   background: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0 20px 40px rgb(229 234 243 / 80%);
-
-  //@include mobile {
-  //  padding-bottom: 34px;
-  //}
 
   @include smallTablet-and-mobile {
     max-width: none;
@@ -23,6 +18,7 @@
     border-radius: 100%;
     z-index: 2;
     @include align(false, true);
+    top: 34%;
     @include transition;
 
     @include mobile {
