@@ -25,7 +25,10 @@ class EventsSlider extends Widget {
       loop: true,
       simulateTouch: false,
       noSwiping: true,
-      effect: 'fade',
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
+      // },
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
