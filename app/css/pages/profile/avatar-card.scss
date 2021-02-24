@@ -16,6 +16,12 @@
     width: 135px;
     height: 135px;
     overflow: hidden;
+
+    img {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+    }
   }
 
   &__name {
