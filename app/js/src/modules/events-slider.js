@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination} from "swiper";
+import Swiper, {Navigation, Pagination, EffectFade} from "swiper";
 
 class EventsSlider extends Widget {
   constructor(node) {
@@ -33,6 +33,10 @@ class EventsSlider extends Widget {
         el: this.$pagination,
         clickable: true,
       },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
     });
   }
 
@@ -55,7 +59,7 @@ class EventsSlider extends Widget {
   build() {
     if (this.$slides.length > 1) {
       this.createSliderElements();
-      Swiper.use([Navigation, Pagination]);
+      Swiper.use([Navigation, Pagination, EffectFade]);
       this.initSwiper();
     }
   }

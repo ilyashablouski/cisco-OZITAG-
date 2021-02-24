@@ -23,6 +23,11 @@
     }
   }
 
+  &__link {
+    @include fill;
+    z-index: 3;
+  }
+
   &__img {
     flex: 0 0 72px;
     max-width: 72px;
