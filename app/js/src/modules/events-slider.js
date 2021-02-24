@@ -32,11 +32,7 @@ class EventsSlider extends Widget {
       pagination: {
         el: this.$pagination,
         clickable: true,
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      }
     });
   }
 
