@@ -1,53 +1,82 @@
 .round-bar {
   position: relative;
-  width: 145px;
-  min-height: 145px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 
-  &__wrapper {
+  &:before {
+    content: "";
     position: absolute;
     top: 50%;
+    right: 0;
     left: 50%;
+    bottom: 0;
+    width: 131px;
+    height: 131px;
     background: #E9EDF1;
-    width: 126px;
-    height: 126px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
 
-  &__circle {
+  &__inner {
     position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     bottom: 0;
-    height: 100%;
-    color: #EAEAEA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &--green {
-      color: $color-green;
+  &__circle {
+    &-back {
+      stroke: #E9EDF1;
+      stroke-width: 1;
+      fill: none;
     }
+
+    &-line {
+      stroke: $color-green;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50px 50px;
+      stroke-dasharray: 304.777px, 304.777px;
+      stroke-dashoffset: 304.777px;
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    &-marker {
+      fill: $color-green;
+      stroke: white;
+      stroke-width: 2.2px;
+      transform-origin: 50px 50px;
+      transform: rotate(0deg);
+      transition: transform 1s ease;
+    }
+
+
   }
 
-  &__marker {
-    fill: #55b9e6;
-    transform-origin: 50px 50px;
-    transform: rotate(0deg);
-
-  }
-
-  &__value {
+  &__text {
     position: absolute;
     top: 50%;
+    right: 0;
     left: 50%;
-    padding: 13px;
+    bottom: 0;
     display: flex;
     align-items: center;
-    width: 75px;
-    height: 75px;
+    justify-content: center;
+    width: 69px;
+    height: 69px;
     font-weight: bold;
     font-size: 22px;
     line-height: 30px;
     background: $color-white;
     color: $color-ocean-blue;
-    border-radius: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 100%;
   }
 }
+
