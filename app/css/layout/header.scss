@@ -62,6 +62,7 @@
         width: 32px;
         height: 32px;
         background: #F5F7FB;
+        object-fit: cover;
       }
     }
 
@@ -112,7 +113,9 @@
       &-btn {
         height: 50px;
         width: 100%;
-        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-weight: normal;
         font-size: 18px;
         line-height: 25px;
