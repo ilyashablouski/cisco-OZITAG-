@@ -40,14 +40,13 @@ class EventsSlider extends Widget {
       fadeEffect: {
         crossFade: true
       },
-      loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: this.$navNext,
-        prevEl: this.$navPrev
+        nextEl: this.$navPrev,
+        prevEl: this.$navNext,
       },
     });
 
