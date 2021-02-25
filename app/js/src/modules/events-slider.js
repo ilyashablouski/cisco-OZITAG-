@@ -20,37 +20,20 @@ class EventsSlider extends Widget {
     this.$slides.forEach($slide => $slide.classList.add('swiper-slide'));
 
     this.swiper = new Swiper(this.$node, {
-      // slidesPerView: 1,
-      // spaceBetween: 0,
-      // loop: true,
-      // simulateTouch: false,
-      // noSwiping: true,
-      // cssMode: true,
-      // navigation: {
-      //   prevEl: this.$navPrev,
-      //   nextEl: this.$navNext,
-      // },
-      // pagination: {
-      //   el: this.$pagination,
-      //   clickable: true,
-      // },
-
+      slidesPerView: 1,
       spaceBetween: 0,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
+      loop: true,
+      simulateTouch: false,
+      noSwiping: true,
+      navigation: {
+        prevEl: this.$navPrev,
+        nextEl: this.$navNext,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: this.$pagination,
         clickable: true,
-      },
-      navigation: {
-        nextEl: this.$navPrev,
-        prevEl: this.$navNext,
-      },
+      }
     });
-
-    console.log(this.swiper);
   }
 
   createSliderElements() {
