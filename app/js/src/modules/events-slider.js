@@ -38,6 +38,8 @@ class EventsSlider extends Widget {
         clickable: true,
       }
     });
+
+    console.log(this.swiper);
   }
 
   createSliderElements() {
