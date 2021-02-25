@@ -108,14 +108,19 @@
         border-radius: 10px;
         width: 126px;
         min-width: 126px;
+
+        li:last-child {
+          .header__user-dropdown-btn {
+            padding-bottom: 15px;
+          }
+        }
       }
 
       &-btn {
-        height: 50px;
+        padding: 15px 15px 0;
         width: 100%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        text-align: left;
+        display: block;
         font-weight: normal;
         font-size: 18px;
         line-height: 25px;
