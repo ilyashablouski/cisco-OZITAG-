@@ -25,6 +25,19 @@
     }
   }
 
+  &__inner {
+    &:hover {
+      .header__user-link {
+        color: $color-primary;
+      }
+
+      .header-dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   &__logo {
     position: absolute;
     left: 0;
@@ -66,19 +79,6 @@
       }
     }
 
-    &-logout {
-      &:hover {
-        .header__user-link {
-          color: $color-primary;
-        }
-
-        .header__user-dropdown {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-
     &-link {
       position: relative;
       z-index: 2;
@@ -92,47 +92,6 @@
       }
     }
 
-    &-dropdown {
-      position: absolute;
-      padding-top: 25px;
-      top: 10px;
-      right: 0;
-      opacity: 0;
-      height: 75px;
-      visibility: hidden;
-      @include transition;
-
-      &-inner {
-        background: $color-white;
-        box-shadow: 0 20px 40px rgb(229 234 243 / 80%);
-        border-radius: 10px;
-        width: 126px;
-        min-width: 126px;
-
-        li:last-child {
-          .header__user-dropdown-btn {
-            padding-bottom: 15px;
-          }
-        }
-      }
-
-      &-btn {
-        padding: 15px 15px 0;
-        width: 100%;
-        text-align: left;
-        display: block;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 25px;
-        color: $color-dark;
-        @include transition;
-
-
-        &:hover {
-          color: lighten($color-dark, 20%);
-        }
-      }
-    }
   }
 }
 

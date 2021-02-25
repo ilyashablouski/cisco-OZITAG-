@@ -1,0 +1,41 @@
+.header-dropdown {
+  position: absolute;
+  padding-top: 25px;
+  top: 10px;
+  right: 0;
+  opacity: 0;
+  height: 75px;
+  visibility: hidden;
+  @include transition;
+
+  &__inner {
+    background: $color-white;
+    box-shadow: 0 20px 40px rgb(229 234 243 / 80%);
+    border-radius: 10px;
+    width: 126px;
+    min-width: 126px;
+
+    li:last-child {
+      .header-dropdown__button {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 15px 15px 0;
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-dark;
+    @include transition;
+
+
+    &:hover {
+      color: lighten($color-dark, 20%);
+    }
+  }
+}
