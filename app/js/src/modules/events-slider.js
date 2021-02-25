@@ -22,13 +22,10 @@ class EventsSlider extends Widget {
     this.swiper = new Swiper(this.$node, {
       slidesPerView: 1,
       spaceBetween: 0,
+      effect: 'fade',
       loop: true,
       simulateTouch: false,
       noSwiping: true,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
