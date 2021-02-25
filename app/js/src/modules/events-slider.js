@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination, EffectFade} from "swiper";
+import Swiper from "swiper/bundle";
 
 class EventsSlider extends Widget {
   constructor(node) {
@@ -23,6 +23,9 @@ class EventsSlider extends Widget {
       slidesPerView: 1,
       spaceBetween: 0,
       effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
       loop: true,
       simulateTouch: false,
       noSwiping: true,
@@ -58,7 +61,7 @@ class EventsSlider extends Widget {
   build() {
     if (this.$slides.length > 1) {
       this.createSliderElements();
-      Swiper.use([Navigation, Pagination, EffectFade]);
+      // Swiper.use([Navigation, Pagination, EffectFade]);
       this.initSwiper();
     }
   }
