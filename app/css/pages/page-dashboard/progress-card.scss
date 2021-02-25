@@ -31,8 +31,11 @@
     }
 
     @include mobile {
-      justify-content: initial;
+      justify-content: space-evenly;
       margin-top: 16px;
+    }
+    @include mobile576 {
+      justify-content: space-between;
     }
   }
 
@@ -41,6 +44,9 @@
     margin-right: 59px;
     width: 149px;
 
+    @include tablet {
+      margin-right: 30px;
+    }
 
     @include smallTablet-and-mobile {
       margin-right: 0;
@@ -48,7 +54,7 @@
     }
 
     @include mobile {
-      margin-right: 30px;
+      margin-right: 10px;
       width: 130px;
     }
   }
@@ -67,13 +73,17 @@
   &__info {
     margin-left: 60px;
 
+    @include tablet {
+      margin-left: 30px;
+    }
+
     @include smallTablet-and-mobile {
       padding-left: 0;
       margin-left: 0;
     }
 
     @include mobile {
-      margin-left: 30px;
+      margin-left: 10px;
     }
 
     &-item {

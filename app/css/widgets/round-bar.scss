@@ -3,6 +3,11 @@
   width: 150px;
   height: 150px;
 
+  @include mobile {
+    width: 134px;
+    height: 134px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -15,6 +20,11 @@
     background: #E9EDF1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+
+    @include mobile {
+      width: 118px;
+      height: 118px;
+    }
   }
 
   &__inner {
@@ -77,6 +87,13 @@
     color: $color-ocean-blue;
     transform: translate(-50%, -50%);
     border-radius: 100%;
+
+    @include mobile {
+      width: 61px;
+      height: 61px;
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 }
 
