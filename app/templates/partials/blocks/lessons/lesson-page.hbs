@@ -41,8 +41,14 @@
       </div>
       <div class="lesson-page__informer">
         {{#if lesson-video}}
+          <div class="lesson-page__informer-header">
           <span class="lesson-page__informer-title lesson-page__informer-title--with-icon">This course is
             completed!</span>
+            <div class="lesson-page__informer-img">
+              {{> widgets/icon icon="flags/flag_india"}}
+            </div>
+          </div>
+
           <p class="lesson-page__informer-text">You have finished the course and earned your passport stamp for
             India.</p>
         {{/if}}
