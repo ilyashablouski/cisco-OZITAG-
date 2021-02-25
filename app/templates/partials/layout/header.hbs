@@ -5,7 +5,14 @@
       <div class="header__user-img">
         {{> components/image img="users/user_01" ext="jpg"}}
       </div>
-      <a href="profile-settings.html" class="header__user-link">Alex Bernard</a>
+      <div class="header__user-logout">
+        <a href="profile-settings.html" class="header__user-link">Alex Bernard</a>
+        <div class="header__user-dropdown">
+          <div class="header__user-dropdown-inner">
+            <button class="header__user-dropdown-btn" type="button">Logout</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
