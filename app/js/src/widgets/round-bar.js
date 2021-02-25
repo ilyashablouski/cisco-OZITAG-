@@ -23,7 +23,6 @@ class RoundBar extends Widget {
 
     this.markerElement.style.transform = 'rotate(' + (360 * value / fullProgressValue) + 'deg)';
     this.progressLineElement.style['stroke-dashoffset'] = (304.777 * (1 - value / fullProgressValue)) + 'px';
-    console.log(this.textElement)
     this.textElement.innerHTML = value + "%";
   }
 
