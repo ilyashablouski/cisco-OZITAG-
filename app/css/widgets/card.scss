@@ -175,11 +175,32 @@
         border-radius: 10px 10px 0 0;
         z-index: 2;
       }
+
+      img {
+        filter: grayscale(1);
+      }
     }
 
     .card__top .icon {
       position: relative;
       display: inline-flex;
+
+      img {
+        filter: grayscale(1);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background: rgba(30, 68, 113, .4);
+        border-radius: 10px 10px 0 0;
+        z-index: 2;
+      }
+
     }
   }
 }
