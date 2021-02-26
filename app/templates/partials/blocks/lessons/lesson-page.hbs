@@ -16,7 +16,7 @@
         incididunt ut labore et dolore magna aliqua.
       </p>
 
-      <div class="lesson-page__content">
+      <div class="lesson-page__content {{#if lesson-video}}lesson-page__content--video{{/if}}">
         {{#if lesson-video}}
           {{> blocks/lessons/video-player}}
         {{/if}}

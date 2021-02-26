@@ -1,6 +1,8 @@
 <div class="info-form">
   <div class="info-form__input">
-    {{> ui/input placeholder="Name" value="Alex Bernard"}}
+    {{#> ui/field id="input_name"}}
+      {{> ui/input id="input_name" placeholder="Name" value="Alex Bernard"}}
+    {{/ui/field}}
   </div>
   <div class="info-form__group">
     <div class="info-form__select">
