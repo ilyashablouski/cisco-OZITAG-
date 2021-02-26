@@ -7,19 +7,22 @@
 
         <div class="authorization-page__wrapper">
           <span class="authorization-page__label {{#if
-                  confirmation}}authorization-page__label--mobile{{/if}}">{{{label}}}</span>
+                  confirmation}}authorization-page__label--mobile{{/if}}">{{{label-page}}}</span>
         </div>
       {{/if}}
-
 
       <div class="authorization-page__wrapper">
         {{#if sign-in}}
           <div class="authorization-page__form-group">
             <div class="authorization-page__input">
-              {{> ui/input placeholder="Email"}}
+              {{#> ui/field id="input_email"}}
+                {{> ui/input id="input_email" placeholder="Email"}}
+              {{/ui/field}}
             </div>
             <div class="authorization-page__input">
-              {{> ui/input placeholder="Password" type="password"}}
+              {{#> ui/field id="input_password"}}
+                {{> ui/input id="input_password" placeholder="Password" type="password"}}
+              {{/ui/field}}
             </div>
             <div class="authorization-page__form-btn">
               <a href="#" class="authorization-page__form-btn-link">Forgot Password?</a>
@@ -30,7 +33,9 @@
         {{#if single-email-input}}
           <div class="authorization-page__form-group">
             <div class="authorization-page__input">
-              {{> ui/input placeholder="Email"}}
+              {{#> ui/field id="input_email"}}
+                {{> ui/input id="input_email" placeholder="Email"}}
+              {{/ui/field}}
             </div>
           </div>
         {{/if}}
@@ -38,11 +43,15 @@
         {{#if two-password-input}}
           <div class="authorization-page__form-group">
             <div class="authorization-page__input">
-              {{> ui/input placeholder="New Password"}}
+              {{#> ui/field id="input_password"}}
+                {{> ui/input id="input_password" placeholder="New Password" type="password"}}
+              {{/ui/field}}
             </div>
 
             <div class="authorization-page__input">
-              {{> ui/input placeholder="Repeat Password"}}
+              {{#> ui/field id="input_password_repeat"}}
+                {{> ui/input id="input_password_repeat" placeholder="Repeat Password" type="password"}}
+              {{/ui/field}}
             </div>
           </div>
         {{/if}}

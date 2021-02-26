@@ -1,5 +1,4 @@
 .form-field {
-  padding-bottom: 20px;
   position: relative;
   width: 100%;
 
@@ -21,22 +20,26 @@
   }
 
   &__note {
-    position: absolute;
+    margin-top: 4px;
     left: 0;
     bottom: 0;
     display: block;
+    text-align: left;
     font-weight: normal;
     font-size: 14px;
+    line-height: 19px;
     color: $color-gray;
   }
 
   &__error {
-    position: absolute;
+    margin-top: 4px;
     left: 0;
     bottom: 0;
     display: block;
+    text-align: left;
     font-weight: normal;
     font-size: 14px;
+    line-height: 19px;
     color: $color-red;
   }
 }
