@@ -28,13 +28,14 @@
 
   &__buttons {
     margin-top: 40px;
-    padding-left: 134px;
+    margin-left: -15px;
+    margin-right: -15px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
 
     @include smallTablet-and-mobile {
-      padding-left: 0;
       flex-wrap: wrap;
       text-align: center;
     }
@@ -45,6 +46,8 @@
   }
 
   &__button {
+    padding: 0 15px;
+
     &-link {
       color: $color-primary;
       white-space: nowrap;
@@ -64,9 +67,9 @@
     }
 
     &:last-child {
-      margin-left: 30px;
       flex: 1 1 236px;
       max-width: 236px;
+      box-sizing: content-box;
 
       @include smallTablet-and-mobile {
         order: 1;
