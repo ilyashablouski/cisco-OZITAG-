@@ -15,15 +15,21 @@
     width: 126px;
     min-width: 126px;
 
+    li:first-child {
+      .header-dropdown__button {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
     li:last-child {
       .header-dropdown__button {
-        padding-bottom: 15px;
+        border-radius: 0 0 10px 10px;
       }
     }
   }
 
   &__button {
-    padding: 15px 15px 0;
+    padding: 12px;
     width: 100%;
     text-align: left;
     display: block;
@@ -33,9 +39,8 @@
     color: $color-dark;
     @include transition;
 
-
     &:hover {
-      color: lighten($color-dark, 20%);
+      background: #F5F7FB;
     }
   }
 }
