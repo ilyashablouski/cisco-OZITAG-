@@ -19,13 +19,8 @@
 
   {{#if img}}
     <div class="card__image">
-      {{#if not-active}}
-        {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india_gray-mobile')
-                ext="jpg"}}
-      {{else}}
-        {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india-mobile')
-                ext="jpg"}}
-      {{/if}}
+      {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india-mobile')
+              ext="jpg"}}
     </div>
   {{/if}}
   <div class="card__content">
