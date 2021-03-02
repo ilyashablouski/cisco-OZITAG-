@@ -33,27 +33,6 @@
       right: 0;
     }
 
-    &--icon {
-      position: relative;
-      width: 30px;
-      height: 30px;
-      background: #F5F6FA;
-      border-radius: 100%;
-
-      &:before {
-        content: '';
-        @include sprite('filter-all');
-        @include align;
-      }
-
-      &:after {
-        display: none;
-      }
-
-      &:hover {
-        background: darken(#F5F6FA, 5%);
-      }
-    }
   }
 
   &__number {
@@ -63,6 +42,12 @@
     @include smallTablet {
       flex: 0 1 60px;
       max-width: 60px;
+    }
+
+    &-label {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
     }
   }
 
