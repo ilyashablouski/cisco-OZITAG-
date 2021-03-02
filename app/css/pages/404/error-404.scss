@@ -1,5 +1,5 @@
 .error-404 {
-  padding-top: 166px;
+  padding-top: 152px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   }
 
   &__content {
-    margin-top: 58px;
+    margin-top: 47px;
     text-align: center;
 
     @include mobile {
