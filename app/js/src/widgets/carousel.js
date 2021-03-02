@@ -47,8 +47,6 @@ class Carousel extends Widget {
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: 6,
       grabCursor: true,
-      // preventClicks: false,
-      // preventClicksPropagation: false,
       breakpoints: {
         1259: {
           spaceBetween: 20,
@@ -57,11 +55,7 @@ class Carousel extends Widget {
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
-      },
-      on: {
-        slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-        slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-      },
+      }
     });
   }
 
