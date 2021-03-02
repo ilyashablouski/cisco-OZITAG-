@@ -1,0 +1,122 @@
+@mixin reset-slider-container {
+  @include tablet {
+    margin-left: -$tabletGutter;
+    margin-right: -$tabletGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      padding-left: $tabletGutter;
+      width: auto;
+      @include hide-scrollbar;
+
+      > * {
+        &:last-child {
+          padding-right: $tabletGutter;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    margin-left: -$mobileGutter;
+    margin-right: -$mobileGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      @include hide-scrollbar;
+      padding-left: $mobileGutter;
+      width: auto;
+
+      > * {
+        &:last-child {
+          padding-right: $mobileGutter !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin reset-slider-container-tablet {
+  @include tablet {
+    margin-left: -$tabletGutter;
+    margin-right: -$tabletGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      padding-left: $tabletGutter;
+      width: auto;
+      @include hide-scrollbar;
+
+      > * {
+        &:last-child {
+          padding-right: $tabletGutter;
+        }
+      }
+    }
+  }
+}
+
+@mixin reset-slider-container-mobile {
+  @include mobile {
+    margin-left: -$mobileGutter;
+    margin-right: -$mobileGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      padding-left: $mobileGutter;
+      width: auto;
+      @include hide-scrollbar;
+
+      > * {
+        &:last-child {
+          padding-right: $mobileGutter !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin reset-slider-container-small-tablet {
+  @include smallTablet {
+    margin-left: -$tabletGutter;
+    margin-right: -$tabletGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      padding-left: $tabletGutter;
+      width: auto;
+      @include hide-scrollbar;
+
+      > * {
+        &:last-child {
+          padding-right: 30px !important;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    margin-left: -$mobileGutter;
+    margin-right: -$mobileGutter;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      @include hide-scrollbar;
+      padding-left: $mobileGutter;
+      width: auto;
+
+      > * {
+        &:last-child {
+          padding-right: $mobileGutter !important;
+        }
+      }
+    }
+  }
+}
+

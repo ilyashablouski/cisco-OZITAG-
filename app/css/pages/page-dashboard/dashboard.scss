@@ -47,8 +47,6 @@
 
   &__cards {
     margin-top: 26px;
-    display: flex;
-    overflow-x: auto;
     filter: drop-shadow(0px 20px 40px rgba(229, 234, 243, 0.8));
     @include no-desktop {
       &::-webkit-scrollbar {
@@ -91,8 +89,11 @@
 
   &__card {
     &:not(:first-child) {
-      padding-left: 20px;
       box-sizing: content-box;
+
+      @include tablet-and-mobile {
+        padding-left: 20px;
+      }
     }
 
     flex: 0 0 180px;
@@ -199,6 +200,23 @@
       @include mobile {
         margin-top: 7px;
       }
+    }
+  }
+
+
+  @include tablet-and-mobile {
+    .carousel__row {
+      margin: 0;
+    }
+
+    .carousel__row > * {
+      padding-left: 0;
+    }
+  }
+
+  @include mobile {
+    .carousel__row > * > :last-child {
+      padding-right: 0 !important;
     }
   }
 }

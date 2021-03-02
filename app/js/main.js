@@ -26,6 +26,7 @@ import './src/widgets/round-bar';
 import './src/widgets/popups';
 import './src/widgets/video-link';
 import './src/widgets/board-filter';
+import './src/widgets/carousel';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
