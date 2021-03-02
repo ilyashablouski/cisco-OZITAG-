@@ -1,5 +1,5 @@
-{{#> modules/carousel/_component}}
-  <div class="dashboard__card swiper-slide js-carousel__item">
+{{#> modules/carousel/_component carousel=carousel}}
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             flag-icon="flags/flag_india"
             title="India"
@@ -9,7 +9,7 @@
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
             title="Germany"
@@ -19,17 +19,17 @@
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
             title="Italy"
             inprogress=true
-            bottom-label="Presentation materials"
+            bottom-label="Presentation <span>materials</span>"
             label-icon='presentation'
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             flag-icon="flags/flag_australia"
             title="Australia"
@@ -39,7 +39,7 @@
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
             title="Indonesia"
@@ -49,7 +49,7 @@
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
             title="Argentina"
@@ -59,33 +59,65 @@
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
-            title="Argentina"
+            title="Spain"
             incompleted=true
             bottom-label="Text materials"
             label-icon='text'
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
-            title="Argentina"
+            title="Belgium"
+            incompleted=true
+            bottom-label="Video materials"
+            label-icon='video'
+    }}
+  </div>
+
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
+    {{> widgets/card
+            btn-top=true
+            title="Georgia"
             incompleted=true
             bottom-label="Text materials"
             label-icon='text'
     }}
   </div>
 
-  <div class="dashboard__card swiper-slide js-carousel__item">
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
     {{> widgets/card
             btn-top=true
-            title="Argentina"
+            title="Luxembourg"
+            incompleted=true
+            bottom-label="Presentation <span>materials</span>"
+            label-icon='presentation'
+    }}
+  </div>
+
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
+    {{> widgets/card
+            btn-top=true
+            title="Norway"
             incompleted=true
             bottom-label="Text materials"
             label-icon='text'
     }}
   </div>
+
+  <div class="{{#if carousel}}carousel__card swiper-slide js-carousel__item {{else}}stamps__card{{/if}}">
+    {{> widgets/card
+            btn-top=true
+            title="United Kingdom"
+            incompleted=true
+            bottom-label="Text materials"
+            label-icon='text'
+    }}
+  </div>
+
+
 {{/modules/carousel/_component}}

@@ -43,4 +43,23 @@
       display: none;
     }
   }
+
+  &__card {
+    &:not(:first-child) {
+      box-sizing: content-box;
+
+      @include tablet-and-mobile {
+        padding-left: 20px;
+      }
+    }
+
+    flex: 0 0 180px;
+    max-width: 180px;
+
+    &:last-child {
+      @include mobile {
+        padding-right: 20px;
+      }
+    }
+  }
 }

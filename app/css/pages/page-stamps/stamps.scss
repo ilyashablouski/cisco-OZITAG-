@@ -1,0 +1,77 @@
+.stamps {
+  margin-top: 20px;
+  padding-bottom: 106px;
+
+  @include smallTablet-and-mobile {
+    padding-bottom: 44px;
+  }
+
+  &__inner {
+    margin-top: 58px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 40px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  &__cards {
+    margin-top: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &__card {
+    padding: 10px;
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+    filter: drop-shadow(0px 20px 40px rgba(229, 234, 243, 0.8));
+
+    @media(max-width: 1400px) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    @include smallTablet {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    @include mobile {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card__bottom-label--presentation span {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .card__content {
+      @include mobile {
+        padding-right: 10px;
+      }
+    }
+
+    .card__title {
+      white-space: nowrap;
+    }
+  }
+}
