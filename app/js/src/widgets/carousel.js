@@ -8,8 +8,11 @@ class Carousel extends Widget {
 
     this.$slider = this.queryElement('.slider');
     this.$slides = this.queryElements('.item');
-    this.$navPrev = this.queryElement('.prev');
-    this.$navNext = this.queryElement('.next');
+
+    this.$controls = document.querySelector('.carousel__controls');
+    this.$navLink = null;
+    this.$navPrev = null;
+    this.$navNext = null;
 
     this.onLayoutChange = this.onLayoutChange.bind(this);
 
@@ -18,8 +21,26 @@ class Carousel extends Widget {
 
   build() {
     this.events();
-
     this.onLayoutChange();
+  }
+
+  createCarouselElements() {
+    this.$navLink = document.createElement('a');
+    this.$navLink.classList.add('carousel__controls-link');
+    this.$navLink.href = "/html/stamps.html";
+    this.$navLink.textContent = "See all";
+    this.$controls.appendChild(this.$navLink);
+
+    this.$navPrev = document.createElement('button');
+    this.$navPrev.classList.add('carousel__nav');
+    this.$navPrev.classList.add('carousel__nav--prev');
+    this.$controls.appendChild(this.$navPrev);
+
+    this.$navNext = document.createElement('button');
+    this.$navNext.classList.add('carousel__nav');
+    this.$navNext.classList.add('carousel__nav--next');
+    this.$controls.appendChild(this.$navNext);
+
   }
 
 
@@ -33,6 +54,7 @@ class Carousel extends Widget {
 
   initDesktop() {
     if (this.$slides.length > 6) {
+      this.createCarouselElements();
       Swiper.use([Navigation]);
       this.initSwiper();
     }

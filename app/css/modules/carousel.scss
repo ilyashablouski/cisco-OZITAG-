@@ -13,34 +13,29 @@
     }
   }
 
-  &__prev {
-    @include no-desktop {
-      display: none;
-    }
-
+  &__controls {
     position: absolute;
-    right: 50px;
-    top: -33px;
-    transform: translateY(-100%) translateX(0);
-
-    .no-navigation & {
-      display: none;
-    }
-
-  }
-
-  &__next {
-    @include no-desktop {
-      display: none;
-    }
-
-    position: absolute;
+    top: 0;
     right: 0;
-    top: -33px;
-    transform: translateY(-100%) translateX(0);
 
-    .no-navigation & {
-      display: none;
+    &-link {
+      position: absolute;
+      right: 100px;
+      top: -57px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      white-space: nowrap;
+
+      @include transition;
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      @include no-desktop {
+        right: 0;
+      }
     }
   }
 
@@ -70,4 +65,86 @@
       }
     }
   }
+
+  .swiper-container {
+    @include desktop {
+      border-radius: 10px;
+    }
+
+    @include mobile {
+      margin-right: -20px;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+
+  &__nav {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: $color-white;
+    display: block;
+    position: relative;
+    @include transition;
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite('button-nav-arrow');
+      @include align(true, true);
+    }
+
+
+    &:hover {
+      background: darken($color-white, 10%);
+    }
+
+    &--next {
+      @include no-desktop {
+        display: none;
+      }
+
+      position: absolute;
+      right: 0;
+      top: -33px;
+      transform: translateY(-100%) translateX(0);
+
+      .no-navigation & {
+        display: none;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(180deg);
+        margin-left: 1px;
+      }
+    }
+
+    &--prev {
+      @include no-desktop {
+        display: none;
+      }
+
+      position: absolute;
+      right: 50px;
+      top: -33px;
+      transform: translateY(-100%) translateX(0);
+
+      .no-navigation & {
+        display: none;
+      }
+
+      &:before {
+        margin-left: -1px;
+      }
+    }
+
+    &.swiper-button-disabled {
+      background: rgba(218, 228, 237, 0.5) !important;
+    }
+  }
+
+
 }
