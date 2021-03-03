@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination, EffectFade} from "swiper";
+import Swiper, {Navigation, Pagination} from "swiper";
 
 class EventsSlider extends Widget {
   constructor(node) {
@@ -55,7 +55,7 @@ class EventsSlider extends Widget {
   build() {
     if (this.$slides.length > 1) {
       this.createSliderElements();
-      Swiper.use([Navigation, Pagination, EffectFade]);
+      Swiper.use([Navigation, Pagination]);
       this.initSwiper();
     }
   }
