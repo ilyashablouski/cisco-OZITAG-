@@ -48,6 +48,14 @@
     &:not(:first-child) {
       box-sizing: content-box;
 
+      @include desktop {
+        margin-left: 20px;
+
+        .swiper-container-initialized & {
+          margin-left: 0;
+        }
+      }
+
       @include tablet-and-mobile {
         padding-left: 20px;
       }

@@ -32,8 +32,10 @@ class Carousel extends Widget {
   }
 
   initDesktop() {
-    Swiper.use([Navigation]);
-    this.initSwiper();
+    if (this.$slides.length > 6) {
+      Swiper.use([Navigation]);
+      this.initSwiper();
+    }
   }
 
   initMobile() {
