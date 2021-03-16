@@ -22,10 +22,15 @@
       position: absolute;
       right: 100px;
       top: -57px;
+      font-family: CiscoSans, sans-serif;
       font-weight: 700;
       font-size: 14px;
       line-height: 19px;
       white-space: nowrap;
+
+      &.no-swiper {
+        right: 0;
+      }
 
       @include transition;
 
@@ -89,6 +94,10 @@
     display: block;
     position: relative;
     @include transition;
+
+    &.no-swiper {
+      display: none;
+    }
 
     &:before {
       content: '';

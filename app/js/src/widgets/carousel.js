@@ -8,11 +8,9 @@ class Carousel extends Widget {
 
     this.$slider = this.queryElement('.slider');
     this.$slides = this.queryElements('.item');
-
-    this.$controls = document.querySelector('.carousel__controls');
-    this.$navLink = null;
-    this.$navPrev = null;
-    this.$navNext = null;
+    this.$navLink = this.queryElement('.carousel__controls-link')
+    this.$navPrev = this.queryElement('.carousel__nav--prev');
+    this.$navNext = this.queryElement('.carousel__nav--next');
 
     this.onLayoutChange = this.onLayoutChange.bind(this);
 
@@ -24,26 +22,6 @@ class Carousel extends Widget {
     this.onLayoutChange();
   }
 
-  createCarouselElements() {
-    this.$navLink = document.createElement('a');
-    this.$navLink.classList.add('carousel__controls-link');
-    this.$navLink.href = "/html/stamps.html";
-    this.$navLink.textContent = "See all";
-    this.$controls.appendChild(this.$navLink);
-
-    this.$navPrev = document.createElement('button');
-    this.$navPrev.classList.add('carousel__nav');
-    this.$navPrev.classList.add('carousel__nav--prev');
-    this.$controls.appendChild(this.$navPrev);
-
-    this.$navNext = document.createElement('button');
-    this.$navNext.classList.add('carousel__nav');
-    this.$navNext.classList.add('carousel__nav--next');
-    this.$controls.appendChild(this.$navNext);
-
-  }
-
-
   onLayoutChange() {
     if (Layout.isDesktopLayout()) {
       this.initDesktop();
@@ -54,9 +32,13 @@ class Carousel extends Widget {
 
   initDesktop() {
     if (this.$slides.length > 6) {
-      this.createCarouselElements();
+
       Swiper.use([Navigation]);
       this.initSwiper();
+    } else {
+      this.$navNext.classList.add('no-swiper');
+      this.$navPrev.classList.add('no-swiper');
+      this.$navLink.classList.add('no-swiper');
     }
   }
 
@@ -95,4 +77,3 @@ class Carousel extends Widget {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-carousel').forEach(item => Carousel.init(item));
 });
-
