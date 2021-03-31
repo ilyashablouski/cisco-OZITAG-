@@ -17,12 +17,10 @@
     {{/if}}
   {{/when}}
 
-  {{#if img}}
-    <div class="card__image">
-      {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india-mobile')
-              ext="jpg"}}
-    </div>
-  {{/if}}
+  <div class="card__image">
+    {{> components/image img=(concat 'courses/' img) img-mobile=(concat 'courses/course_india-mobile')
+            ext="jpg"}}
+  </div>
   <div class="card__content">
     <div class="card__top">
       {{#if flag-icon}}

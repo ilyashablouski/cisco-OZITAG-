@@ -1,0 +1,101 @@
+.stamp-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--not-active {
+    .stamp-card__image {
+      img {
+        filter: grayscale(1);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__link {
+    @include fill;
+    z-index: 3;
+  }
+
+  &__top {
+    position: relative;
+    padding-top: 65.55%;
+    max-height: 118px;
+    background: #E2ECFF;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    padding: 0px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-height: 89px;
+      //noinspection CssInvalidPropertyValue
+      image-rendering: -webkit-optimize-contrast;
+
+      @include mobile {
+        max-height: 79px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    height: 100%;
+  }
+
+  &__title {
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    word-break: break-word;
+  }
+
+  &__status {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    &--completed {
+      color: $color-green;
+    }
+
+    &--incompleted {
+      color: $color-gray;
+    }
+
+    &--inprogress {
+      color: $color-yellow-text;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+    padding-top: 16px;
+  }
+
+  &__button {
+    margin-left: auto;
+  }
+}

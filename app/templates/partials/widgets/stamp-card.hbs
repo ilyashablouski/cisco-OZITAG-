@@ -1,0 +1,52 @@
+<div class="stamp-card {{#if not-active}}stamp-card--not-active{{/if}}">
+  {{#if incompleted}}
+    <a href="#" class="card__link"></a>
+  {{/if}}
+
+  {{#if inprogress}}
+    <a href="courses-lesson-pdf.html" class="card__link"></a>
+  {{/if}}
+
+  {{#if completed}}
+    <a href="courses-lesson-video.html" class="card__link"></a>
+  {{/if}}
+
+  <div class="stamp-card__top">
+    <div class="stamp-card__image">
+      {{> components/image img=(concat 'stamps/' image) img-mobile=(concat 'stamps/' image '-mobile') ext="png"}}
+    </div>
+  </div>
+  <div class="stamp-card__content">
+    <span class="stamp-card__title">{{title}}</span>
+    <span class="stamp-card__status stamp-card__status{{#if completed}}--completed{{/if}}{{#if
+            incompleted}}--incompleted{{/if}}{{#if
+            inprogress}}--inprogress{{/if}}">
+    {{#if completed}}
+      Completed
+    {{/if}}
+
+      {{#if incompleted}}
+        Incompleted
+      {{/if}}
+
+      {{#if inprogress}}
+        In Progress
+      {{/if}}
+  </span>
+    <div class="stamp-card__bottom">
+      <div class="stamp-card__button">
+        {{#if incompleted}}
+          {{> ui/btn size='middle' label="Start" w100=true}}
+        {{/if}}
+
+        {{#if inprogress}}
+          {{> ui/btn size='middle' href="courses-lesson-pdf.html" color="yellow" label="Continue" w100=true}}
+        {{/if}}
+
+        {{#if completed}}
+          {{> ui/btn size='middle' href="courses-lesson-video.html" color="light-blue" label="Revisit" w100=true}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
